@@ -43,6 +43,7 @@ function cobianzo_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'cobianzo' ),
+		'footer' => __( 'Footer Menu', 'cobianzo' ),
 	) );
 
 	/*
@@ -57,15 +58,15 @@ function cobianzo_setup() {
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array(
+/*	add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'quote', 'link',
-	) );
+	) ); */
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'cobianzo_custom_background_args', array(
+/*	add_theme_support( 'custom-background', apply_filters( 'cobianzo_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
-	) ) );
+	) ) ); */
 }
 endif; // cobianzo_setup
 add_action( 'after_setup_theme', 'cobianzo_setup' );

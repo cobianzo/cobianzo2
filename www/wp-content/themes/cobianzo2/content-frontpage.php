@@ -36,7 +36,7 @@
 				?>
 					<ul class='navbar-nav nav'>
 					<li>
-						<a href='?filterby=' title='' <?php echo (!$current_filter)? 'class=active': '' ; ?>>
+						<a href='?filterby=#portfolio' title='' <?php echo (!$current_filter)? 'class=active': '' ; ?>>
 							<?php _e('Show all'); ?>
 						</a>
 					</li>
@@ -45,7 +45,7 @@
 					foreach ($cats as $work_cat) {
 					?>
 					<li> 
-						<a 	href='?filterby=<?php echo $work_cat->slug; ?>' title='<?php esc_attr(__('filter by ').$work_cat->name); ?>'
+						<a 	href='?filterby=<?php echo $work_cat->slug; ?>#portfolio' title='<?php esc_attr(__('filter by ').$work_cat->name); ?>'
 							<?php echo ($current_filter == $work_cat->slug)? 'class=active': '' ; ?>>
 						<?php echo $work_cat->name;  ?> 
 						</a>

@@ -13,13 +13,33 @@
 
 	</div><!-- .row -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'cobianzo' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'cobianzo' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'cobianzo' ), 'cobianzo', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer id="footer" class="clearfix container" role="contentinfo">
+		<div class='row-fluid'>
+			<div class='col-sm-3'>
+				<?php
+					_e("Cobianzo Communication Ltd &copy;");
+				?>
+			</div>
+
+			<?php
+					wp_nav_menu( array(
+						'menu'              => 'footer',
+						'theme_location'    => 'footer',
+						'depth'             => 2,
+						'container'         => 'div',
+						'container_class'   => 'col-sm-6 text-center',
+						'container_id'      => '',
+						'menu_class'        => 'navbar-nav nav',
+						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						'walker'            => new wp_bootstrap_navwalker())
+							);			
+			?>
+
+			<div class='col-sm-3 text-right'>
+				<?php _e("All right reserved"); ?>
+			</div>	
+		</div>
+	</footer><!-- #footer -->
 </div><!-- .container -->
 
 <?php wp_footer(); ?>
