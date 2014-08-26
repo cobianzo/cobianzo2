@@ -93,14 +93,34 @@ add_action( 'widgets_init', 'cobianzo_widgets_init' );
  */
 function cobianzo_scripts() {
 
-	wp_enqueue_style( 'cobianzo-style', get_template_directory_uri() . '/bootstrap/bootstrap.css' );
+	# Styles
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/bootstrap.css' );
 	wp_enqueue_style( 'cobianzo-style', get_stylesheet_uri() );	
+
+	# Javscript jquery and bootstrap
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-2.1.1.min.js', array(), '20130115', true );	
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/javascripts/bootstrap.js', array(), '20130115', true );
 	
-	
+	# Other Javscript 
 	wp_enqueue_script( 'cobianzo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+//	TO_DO: include customizr or modernizr.
+//	wp_enqueue_script( 'customizer', get_template_directory_uri() . '/js/customizer.js', array(), '20130115', true );
+
+
+	# carousel
+	if ((is_home()) && (is_front_page()))
+	{	
+		wp_enqueue_style( 'owl-carousel-css', get_template_directory_uri() . '/js/owl-carousel/owl.carousel.css' );	
+		wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/owl-carousel/owl.carousel.min.js', array(), '20130115', true );
+	}
+	wp_enqueue_script( 'cobianzo-custom', get_template_directory_uri() . '/js/cobianzo.custom.js', array(), '20130115', true );
+
+	
+	
+	
 }
 add_action( 'wp_enqueue_scripts', 'cobianzo_scripts' );
 
@@ -109,6 +129,13 @@ add_action( 'wp_enqueue_scripts', 'cobianzo_scripts' );
  */
 //require get_template_directory() . '/inc/custom-header.php';
 
+
+
+
+
+
+
+require get_template_directory() . '/inc/wp_bootstrap_navwalker.php'; // to convert a menu into botstrap style. #https://github.com/twittem/wp-bootstrap-navwalker
 
 
 require get_template_directory() . '/inc/custom-post-types-acf.php';

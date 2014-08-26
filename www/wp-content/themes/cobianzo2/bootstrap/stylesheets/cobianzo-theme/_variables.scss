@@ -11,17 +11,17 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              lighten(#000, 20%) !default;   // #333
+$gray-darker:            #000000 !default; // negro
+$gray-dark:              lighten(#000, 10%) !default;   // 
 $gray:                   lighten(#000, 33.5%) !default; // #555
-$gray-light:             lighten(#000, 46.7%) !default; // #777
+$gray-light:             #8d9190 !default; // # corporative color, light gray
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
-$brand-primary:         #428bca !default;
-$brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
+$brand-primary:         #fbde00 !default;		// amarillo
+$brand-success:         #12adef !default;		// azul
+$brand-info:            darken($brand-primary, 30%) !default;
+$brand-warning:         darken($brand-success, 30%) !default;
+$brand-danger:          #d73703 !default;	// un rojo moderno
 
 
 //== Scaffolding
@@ -34,7 +34,7 @@ $body-bg:               #fff !default;
 $text-color:            $gray-dark !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            $brand-success;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 
@@ -44,12 +44,12 @@ $link-hover-color:      darken($link-color, 15%) !default;
 //## Font, line-height, and color for body text, headings, and more.
 
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-serif:       Dosis, Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-sans-serif !default;
+$font-family-base:        Lora, $font-family-sans-serif !default;
 
-$font-size-base:          14px !default;
+$font-size-base:          16px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
@@ -66,7 +66,7 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    inherit !default;
+$headings-font-family:    Century Gothic !default;
 $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
@@ -77,7 +77,7 @@ $headings-color:          inherit !default;
 //## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
 //** Load fonts from this directory.
-$icon-font-path: "bootstrap/" !default;
+$icon-font-path: "fonts/bootstrap/" !default;
 //** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;
 //** Element ID within SVG icon file.
@@ -347,7 +347,7 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;
+$navbar-default-bg:                #fff !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
@@ -355,7 +355,7 @@ $navbar-default-link-color:                #777 !default;
 $navbar-default-link-hover-color:          #333 !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         #555 !default;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-active-bg:            #ffffff;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 

@@ -8,7 +8,10 @@
  */
 ?>
 
-	</div><!-- #content -->
+	</article> <!--abierto en header.php -->
+
+
+	</div><!-- .row -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
@@ -17,7 +20,7 @@
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'cobianzo' ), 'cobianzo', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
+</div><!-- .container -->
 
 <?php wp_footer(); ?>
 
