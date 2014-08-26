@@ -1,0 +1,58 @@
+@import "bootstrap/stylesheets/cobianzo-theme/variables";
+@import "bootstrap/stylesheets/cobianzo-theme/mixins";
+
+
+.hide-faraway {
+	position:absolute;
+	left:-30000px
+}
+
+
+
+
+/* HEADER*/
+
+#header {
+
+	nav { 
+		font-family:		$headings-font-family;
+	}
+
+	#primary-menu {
+		padding-left:		0;
+		border:				0;
+		
+		h1 {
+			padding:0; margin:0;
+		}
+		
+		#navbarCollapse { border: 0; }
+		#menu-top-menu {
+			float:			right;
+			border-bottom:	1px solid $gray-light;
+			padding-top:	24px;
+		}
+	}
+
+}
+
+	
+		
+		
+/* MAIN-CONTENT */
+#important-content {
+	margin-top:50px;
+}
+		
+/* COMPONENTS - OWL CAROUSEL HOME */
+#owl-demo {
+	.owl-wrapper-outer {
+		margin-top:			30px;
+	}
+	
+	 .item img{
+    	display: 			block;
+	    width: 				100%;
+    	height: 			auto;
+	}
+}
