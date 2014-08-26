@@ -50,7 +50,7 @@
 					</a>
 				</h1>		
 			</div>
-			<!-- Collection of nav links and other content for toggling -->
+			<!-- Collection of nav links and other content for toggling <div id='navbarCollapse' class='collapse navbar-collapse'> -->
 			 <?php
 							wp_nav_menu( array(
 						'menu'              => 'primary',
