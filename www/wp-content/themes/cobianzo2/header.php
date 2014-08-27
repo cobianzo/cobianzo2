@@ -46,7 +46,7 @@
 				<h1 class='text-left col-sm-3 col-xs-8'>			
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title='<?php echo esc_attr(get_option( 'description' )); ?>'>
 						<b class='site-title hide-faraway'><?php bloginfo( 'blogname' ); ?></b>
-						<img alt='<?php echo esc_attr(get_option( 'blogname' )).__('logo'); ?>' src='<?php echo get_template_directory_uri() ?>/imgs/logo.png' >
+						<img id='the-logo' alt='<?php echo esc_attr(get_option( 'blogname' )).__('logo'); ?>' src='<?php echo get_template_directory_uri() ?>/imgs/logo.png' >
 					</a>
 				</h1>		
 			</div>
@@ -71,6 +71,6 @@
 
 
 
-	<article id=important-content role=main>
+	<article id=important-content class='row-fluid' role=main>
 	
 <?php	# quedan abiertos .container, .row, y article	?>

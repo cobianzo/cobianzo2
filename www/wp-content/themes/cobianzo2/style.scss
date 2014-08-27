@@ -16,6 +16,10 @@
 
 #header {
 
+	#the-logo {
+		margin-bottom:			30px;
+	}
+	
 	nav { 
 		font-family:		$headings-font-family;
 	}
@@ -43,7 +47,7 @@
 		
 /* MAIN-CONTENT */
 #important-content {
-	margin-top:50px;
+	 margin-top:		80px; 
 }
 		
 /* COMPONENTS - OWL CAROUSEL HOME */
@@ -65,7 +69,7 @@
 /* FOOTER */
 
 #footer {
-	margin:			30px 0 0 0;
+	margin:			30px auto;
 	padding-top:	20px;
 	border-top:		1px solid $gray-light;
 

@@ -11,24 +11,28 @@
 
 /* HEADER*/
 /* line 19, style.scss */
+#header #the-logo {
+  margin-bottom: 30px;
+}
+/* line 23, style.scss */
 #header nav {
   font-family: Century Gothic;
 }
-/* line 23, style.scss */
+/* line 27, style.scss */
 #header #primary-menu {
   padding-left: 0;
   border: 0;
 }
-/* line 27, style.scss */
+/* line 31, style.scss */
 #header #primary-menu h1 {
   padding: 0;
   margin: 0;
 }
-/* line 31, style.scss */
+/* line 35, style.scss */
 #header #primary-menu #navbarCollapse {
   border: 0;
 }
-/* line 32, style.scss */
+/* line 36, style.scss */
 #header #primary-menu #menu-top-menu {
   float: right;
   border-bottom: 1px solid #8d9190;
@@ -36,17 +40,17 @@
 }
 
 /* MAIN-CONTENT */
-/* line 45, style.scss */
+/* line 49, style.scss */
 #important-content {
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 /* COMPONENTS - OWL CAROUSEL HOME */
-/* line 51, style.scss */
+/* line 55, style.scss */
 #owl-demo .owl-wrapper-outer {
   margin-top: 30px;
 }
-/* line 55, style.scss */
+/* line 59, style.scss */
 #owl-demo .item img {
   display: block;
   width: 100%;
@@ -54,9 +58,9 @@
 }
 
 /* FOOTER */
-/* line 67, style.scss */
+/* line 71, style.scss */
 #footer {
-  margin: 30px 0 0 0;
+  margin: 30px auto;
   padding-top: 20px;
   border-top: 1px solid #8d9190;
 }
