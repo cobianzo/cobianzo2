@@ -9,30 +9,35 @@
   font-family: Century Gothic;
 }
 
+/* line 17, style.scss */
+body.admin-bar .navbar-fixed-top {
+  margin-top: 32px;
+}
+
 /* HEADER*/
-/* line 19, style.scss */
+/* line 27, style.scss */
 #header #the-logo {
   margin-bottom: 30px;
 }
-/* line 23, style.scss */
+/* line 31, style.scss */
 #header nav {
   font-family: Century Gothic;
 }
-/* line 27, style.scss */
+/* line 35, style.scss */
 #header #primary-menu {
   padding-left: 0;
   border: 0;
 }
-/* line 31, style.scss */
+/* line 39, style.scss */
 #header #primary-menu h1 {
   padding: 0;
   margin: 0;
 }
-/* line 35, style.scss */
+/* line 43, style.scss */
 #header #primary-menu #navbarCollapse {
   border: 0;
 }
-/* line 36, style.scss */
+/* line 44, style.scss */
 #header #primary-menu #menu-top-menu {
   float: right;
   border-bottom: 1px solid #8d9190;
@@ -40,17 +45,48 @@
 }
 
 /* MAIN-CONTENT */
-/* line 49, style.scss */
+/* line 57, style.scss */
 #important-content {
-  margin-top: 80px;
+  margin-top: 135px;
+}
+
+/* COMPONENTS - WORKS PREVIEW */
+/* line 62, style.scss */
+ul#works-preview {
+  padding: 0 0 0 10px;
+}
+/* line 64, style.scss */
+ul#works-preview li {
+  list-style: none;
+  height: 200px;
+  overflow: hidden;
+  padding: 0 10px 0 0;
+  margin-bottom: 10px;
+}
+/* line 72, style.scss */
+ul#works-preview li h5 {
+  position: absolute;
+  background: black;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 10%;
+  text-align: center;
+  display: none;
+  color: #ededed;
+}
+/* line 88, style.scss */
+ul#works-preview li img {
+  width: 100%;
+  height: auto;
 }
 
 /* COMPONENTS - OWL CAROUSEL HOME */
-/* line 55, style.scss */
+/* line 97, style.scss */
 #owl-demo .owl-wrapper-outer {
   margin-top: 30px;
 }
-/* line 59, style.scss */
+/* line 101, style.scss */
 #owl-demo .item img {
   display: block;
   width: 100%;
@@ -58,7 +94,7 @@
 }
 
 /* FOOTER */
-/* line 71, style.scss */
+/* line 113, style.scss */
 #footer {
   margin: 30px auto;
   padding-top: 20px;
