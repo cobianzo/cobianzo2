@@ -1,61 +1,113 @@
+/* MY OWN CLASSES (generic) */
 /* line 5, style.scss */
 .hide-faraway {
   position: absolute;
   left: -30000px;
 }
 
-/* line 10, style.scss */
-.navbar {
+/* line 9, style.scss */
+.font-title {
   font-family: Century Gothic;
 }
 
-/* line 17, style.scss */
+/* line 12, style.scss */
+.font-default {
+  font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 16, style.scss */
+.padding-top {
+  padding-top: 14px;
+}
+
+/* line 19, style.scss */
+.padding-left {
+  padding-left: 30px;
+}
+
+/* OVERWRITING BOOTSTRAP CLASSES  */
+/* line 26, style.scss */
+.navbar-default {
+  border: 0;
+}
+
+/* line 27, style.scss */
+.navbar-nav {
+  font-family: Century Gothic;
+  font-size: 14px;
+}
+/* line 30, style.scss */
+.navbar-nav li.active a, .navbar-nav li a.active {
+  border-bottom: 7px solid #fbde00;
+}
+/* line 33, style.scss */
+.navbar-nav a {
+  border-bottom: 7px solid white;
+  padding: 15px 5px 5px 4px !important;
+  margin: 0 10px;
+}
+/* line 38, style.scss */
+.navbar-nav a:hover {
+  border-bottom: 7px solid #fbde00;
+}
+
+/* line 47, style.scss */
 body.admin-bar .navbar-fixed-top {
   margin-top: 32px;
 }
 
 /* HEADER*/
-/* line 27, style.scss */
+/* line 57, style.scss */
 #header #the-logo {
-  margin-bottom: 30px;
+  margin: 10px 0;
 }
-/* line 31, style.scss */
+/* line 61, style.scss */
 #header nav {
   font-family: Century Gothic;
 }
-/* line 35, style.scss */
-#header #primary-menu {
+/* line 65, style.scss */
+#header nav#primary-menu {
   padding-left: 0;
   border: 0;
 }
-/* line 39, style.scss */
-#header #primary-menu h1 {
+/* line 70, style.scss */
+#header nav#primary-menu h1 {
   padding: 0;
   margin: 0;
 }
-/* line 43, style.scss */
-#header #primary-menu #navbarCollapse {
+/* line 73, style.scss */
+#header nav#primary-menu #border-bottom-container {
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #8d9190;
+}
+/* line 78, style.scss */
+#header nav#primary-menu #navbarCollapse {
   border: 0;
 }
-/* line 44, style.scss */
-#header #primary-menu #menu-top-menu {
+/* line 79, style.scss */
+#header nav#primary-menu #menu-top-menu {
   float: right;
   border-bottom: 1px solid #8d9190;
-  padding-top: 24px;
+  padding-top: 15px;
+}
+/* line 83, style.scss */
+#header nav#primary-menu #menu-top-menu li {
+  margin-bottom: 6px;
 }
 
 /* MAIN-CONTENT */
-/* line 57, style.scss */
+/* line 100, style.scss */
 #important-content {
-  margin-top: 135px;
+  margin-top: 115px;
 }
 
 /* COMPONENTS - WORKS PREVIEW */
-/* line 62, style.scss */
+/* line 105, style.scss */
 ul#works-preview {
   padding: 0 0 0 10px;
 }
-/* line 64, style.scss */
+/* line 107, style.scss */
 ul#works-preview li {
   list-style: none;
   height: 200px;
@@ -63,8 +115,10 @@ ul#works-preview li {
   padding: 0 10px 0 0;
   margin-bottom: 10px;
 }
-/* line 72, style.scss */
+/* line 115, style.scss */
 ul#works-preview li h5 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
   position: absolute;
   background: black;
   width: 100%;
@@ -75,26 +129,48 @@ ul#works-preview li h5 {
   display: none;
   color: #ededed;
 }
-/* line 88, style.scss */
+/* line 128, style.scss */
+ul#works-preview li h5 hr {
+  margin: 10px 0 5px;
+}
+/* line 137, style.scss */
 ul#works-preview li img {
   width: 100%;
   height: auto;
 }
 
 /* COMPONENTS - OWL CAROUSEL HOME */
-/* line 97, style.scss */
-#owl-demo .owl-wrapper-outer {
-  margin-top: 30px;
-}
-/* line 101, style.scss */
+/* line 150, style.scss */
 #owl-demo .item img {
   display: block;
   width: 100%;
   height: auto;
 }
 
+/* line 157, style.scss */
+.owl-buttons {
+  position: absolute;
+  width: 100%;
+  margin-top: -200px;
+}
+
+/* line 162, style.scss */
+.owl-prev, .owl-next {
+  zoom: 3;
+  color: white;
+  margin-left: 4px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+/* line 168, style.scss */
+.owl-next {
+  position: absolute;
+  right: 13px;
+}
+
 /* FOOTER */
-/* line 113, style.scss */
+/* line 178, style.scss */
 #footer {
   margin: 30px auto;
   padding-top: 20px;

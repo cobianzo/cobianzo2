@@ -111,6 +111,8 @@ function cobianzo_scripts() {
 //	wp_enqueue_script( 'customizer', get_template_directory_uri() . '/js/customizer.js', array(), '20130115', true );
 
 
+
+
 	# carousel
 	if ((is_home()) && (is_front_page()))
 	{	
@@ -119,6 +121,9 @@ function cobianzo_scripts() {
 	}
 	wp_enqueue_script( 'cobianzo-custom', get_template_directory_uri() . '/js/cobianzo.custom.js', array(), '20130115', true );
 
+	wp_localize_script( 'cobianzo-custom', 'MyJS', array( 
+			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ), 			  /* MyJS.ajaxurl , to use Ajax properly in WP , i need it */
+	) );
 	
 	
 	
@@ -129,9 +134,6 @@ add_action( 'wp_enqueue_scripts', 'cobianzo_scripts' );
  * Implement the Custom Header feature. Not used :) !
  */
 //require get_template_directory() . '/inc/custom-header.php';
-
-
-
 
 
 
@@ -161,3 +163,46 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+
+
+
+
+/*  
+	AJAX: cargar la preview de trabajo por categoria
+*/
+
+add_action('wp_ajax_print_work_gallery', 'print_work_gallery'); /* for pagination with ajas. see netgig.custom.js*/
+add_action('wp_ajax_nopriv_print_work_gallery', 'print_work_gallery');
+function print_work_gallery( $params=array()){
+	$options = array_merge( array( 'work_category' => '' ) , (is_array($params)? $params :  array()));
+	if (isset($_POST['work_category']))  $options = array_merge($options, $_POST);
+
+	$params		=	array(
+		'post_type' 	=>	'work',
+		'posts_per_page'=>	-1,
+		'orderby'		=>	'menu_order date',
+		'order'			=> 'DESC'
+	);
+	
+	$params['work_category']	= 	$options['work_category'];
+
+	query_posts($params);
+	if (!have_posts()) {
+			get_template_part( 'content', 'none' ); 
+	}else 
+	while (have_posts()) : the_post();
+	?>
+	<ul id='works-preview'>
+	<?php
+				get_template_part( 'content', 'work-preview' );
+	?>
+	</ul>
+	<?php	
+	endwhile;
+
+	if (defined('DOING_AJAX') && DOING_AJAX) { die(); }
+
+}

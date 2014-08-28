@@ -16,10 +16,10 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); 
-	# using Lora gogole webfont
+	# using  gogole webfont
 ?>
 
-<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700|Dancing+Script' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -51,6 +51,7 @@
 				</h1>		
 			</div>
 			<!-- Collection of nav links and other content for toggling <div id='navbarCollapse' class='collapse navbar-collapse'> -->
+			<div id='border-bottom-container'>
 			 <?php
 							wp_nav_menu( array(
 						'menu'              => 'primary',
@@ -64,6 +65,7 @@
 						'walker'            => new wp_bootstrap_navwalker())
 							);
 			 ?>	
+			 </div>
 			</nav>
 
 		</header>

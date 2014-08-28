@@ -1,14 +1,44 @@
 @import "bootstrap/stylesheets/cobianzo-theme/variables";
 @import "bootstrap/stylesheets/cobianzo-theme/mixins";
 
-
+/* MY OWN CLASSES (generic) */
 .hide-faraway {
 	position:absolute;
 	left:-30000px
 }
-
-.navbar {
+.font-title {
 	font-family:		$headings-font-family;
+}
+.font-default {
+	font-family:		$font-family-base;
+}
+$nav-padding-top:		15px;	
+.padding-top {
+	padding-top:	$nav-padding-top - 1;
+}
+.padding-left {
+	padding-left:	$nav-padding-top * 2;
+}
+
+
+
+/* OVERWRITING BOOTSTRAP CLASSES  */ 
+.navbar-default { 	border:		0; }
+.navbar-nav {
+	font-family:		$headings-font-family;
+	font-size:			14px;
+	li.active a, li a.active	{
+		border-bottom: 7px solid $brand-primary;		
+	}
+	a {	
+		border-bottom: 		7px solid white;			
+		padding:			15px 5px 5px 4px !important;
+		margin:				0 10px;
+				
+		&:hover{
+			border-bottom: 7px solid $brand-primary;	
+		}
+	}
 }
 
 
@@ -25,26 +55,39 @@ body.admin-bar .navbar-fixed-top{
 #header {
 
 	#the-logo {
-		margin-bottom:			30px;
+		margin:				10px 0;
 	}
 	
 	nav { 
 		font-family:		$headings-font-family;
 	}
 
-	#primary-menu {
+	nav#primary-menu {
 		padding-left:		0;
 		border:				0;
+		
 		
 		h1 {
 			padding:0; margin:0;
 		}
-		
+		#border-bottom-container{
+			position:		absolute;
+			width:			100%;		
+			border-bottom:	1px solid $gray-light;
+		}
 		#navbarCollapse { border: 0; }
 		#menu-top-menu {
 			float:			right;
 			border-bottom:	1px solid $gray-light;
-			padding-top:	24px;
+			padding-top:	$nav-padding-top;
+			li {
+				margin-bottom:	6px;
+
+				a {
+				}
+
+			}
+		
 		}
 	}
 
@@ -55,7 +98,7 @@ body.admin-bar .navbar-fixed-top{
 		
 /* MAIN-CONTENT */
 #important-content {
-	 margin-top:		135px; 
+	 margin-top:		115px; 
 }
 		
 /* COMPONENTS - WORKS PREVIEW */
@@ -66,10 +109,12 @@ ul#works-preview	{
 		list-style:		none;
 		height:			200px;
 		overflow:		hidden;
-		padding:	0 10px 0 0;
+		padding:		0 10px 0 0;
 		margin-bottom:	10px;
 		
 		h5 {
+			font-family:'Dancing Script', cursive;
+			font-size:	25px;
 			position: 	absolute;
 			background:	$gray-darker;
 			width: 		100%;
@@ -78,7 +123,11 @@ ul#works-preview	{
 			padding: 	10%;
 			text-align: center;	
 			display:	none;
-			color:			$gray-lighter;			
+			color:		$gray-lighter;			
+			
+			hr {
+				margin: 10px 0 5px;
+			}
 		}
 		&:hover h5 {
 
@@ -95,7 +144,7 @@ ul#works-preview	{
 /* COMPONENTS - OWL CAROUSEL HOME */
 #owl-demo {
 	.owl-wrapper-outer {
-		margin-top:			30px;
+		
 	}
 	
 	 .item img{
@@ -103,6 +152,22 @@ ul#works-preview	{
 	    width: 				100%;
     	height: 			auto;
 	}
+}
+
+.owl-buttons {
+	position:		absolute;
+	width:			100%;
+	margin-top:		-200px;	
+}
+.owl-prev, .owl-next {
+	zoom:			3;
+	color:			white;
+	margin-left:	4px;
+	@include opacity(0.8);
+}
+.owl-next {
+	position:		absolute;
+	right:			13px;
 }
 
 

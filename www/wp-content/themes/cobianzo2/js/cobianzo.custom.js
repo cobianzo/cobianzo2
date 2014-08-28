@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
  
  
   jQuery("ul#works-preview li").hover(
-  	function(){	jthis = jQuery(this); jthis.find('h5').css('width', jthis.width()+'px').fadeTo('slow', 0.5); },
+  	function(){	jthis = jQuery(this); jthis.find('h5').css('width', jthis.width()+'px').fadeTo('slow', 0.8); },
   	function(){ jQuery(this).find('h5').fadeOut('slow');  }  
   );
  
