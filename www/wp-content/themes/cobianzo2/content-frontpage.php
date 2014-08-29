@@ -59,12 +59,14 @@
 			<script>
 				jQuery('.filter-trigger-ajax').click(function(e){
 					e.preventDefault();
+					addLoadingWheel("body", '');
 					jthis	= jQuery(this);
 					jQuery.post(MyJS.ajaxurl, {
 			            		action: 'print_work_gallery',
 			            		work_category: jthis.attr('data-filter'),
 			            		ajax:	true,					
 			            }, function(response)     {	
+				            removeLoadingWheel();
 			            	jQuery('#works-preview-container').html(response);
 			            	jQuery("#navbarFilter a").removeClass('active');
 			            	jthis.addClass('active');

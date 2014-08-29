@@ -10,7 +10,7 @@ foreach ($work_cats as $cc) $w_c[]	=  $cc->name;
 ?>
 
 		
-		<li class='col-sm-6 col-md-4 col-lg-3'>
+		<li class='col-xs-6 col-sm-4 col-md-3 col-lg-3'>
 			<a href='<?php the_permalink(); ?>' title='<?php echo esc_attr(get_the_excerpt()); ?>' rel='noindex nofollow'>
 			<h5><?php the_title(); ?>
 				<hr>

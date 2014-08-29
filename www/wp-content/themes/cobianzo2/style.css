@@ -25,89 +25,113 @@
   padding-left: 30px;
 }
 
+/* line 25, style.scss */
+.loading-wheel {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
+  text-align: center;
+  background: white url("imgs/ajax-loader.gif") no-repeat center center;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+/*
+Overwriting html 
+*/
+/* line 39, style.scss */
+p {
+  line-height: 1.6em;
+}
+
 /* OVERWRITING BOOTSTRAP CLASSES  */
-/* line 26, style.scss */
+/* line 43, style.scss */
 .navbar-default {
   border: 0;
 }
 
-/* line 27, style.scss */
+/* line 44, style.scss */
 .navbar-nav {
   font-family: Century Gothic;
   font-size: 14px;
 }
-/* line 30, style.scss */
+/* line 47, style.scss */
 .navbar-nav li.active a, .navbar-nav li a.active {
-  border-bottom: 7px solid #fbde00;
+  border-bottom: 3px solid #fbde00;
 }
-/* line 33, style.scss */
+/* line 50, style.scss */
 .navbar-nav a {
-  border-bottom: 7px solid white;
-  padding: 15px 5px 5px 4px !important;
+  border-bottom: 3px solid white;
+  padding: 20px 5px 0px 5px !important;
   margin: 0 10px;
 }
-/* line 38, style.scss */
+/* line 55, style.scss */
 .navbar-nav a:hover {
-  border-bottom: 7px solid #fbde00;
+  border-bottom: 3px solid #fbde00;
 }
 
-/* line 47, style.scss */
+/* line 64, style.scss */
 body.admin-bar .navbar-fixed-top {
   margin-top: 32px;
 }
 
 /* HEADER*/
-/* line 57, style.scss */
+/* line 74, style.scss */
 #header #the-logo {
   margin: 10px 0;
+  position: absolute;
+  z-index: 99;
 }
-/* line 61, style.scss */
+/* line 80, style.scss */
 #header nav {
   font-family: Century Gothic;
 }
-/* line 65, style.scss */
+/* line 84, style.scss */
 #header nav#primary-menu {
   padding-left: 0;
   border: 0;
+  min-height: 100px;
+  background: white;
 }
-/* line 70, style.scss */
+/* line 90, style.scss */
 #header nav#primary-menu h1 {
   padding: 0;
   margin: 0;
 }
-/* line 73, style.scss */
+/* line 93, style.scss */
 #header nav#primary-menu #border-bottom-container {
   position: absolute;
   width: 100%;
   border-bottom: 1px solid #8d9190;
 }
-/* line 78, style.scss */
+/* line 98, style.scss */
 #header nav#primary-menu #navbarCollapse {
   border: 0;
 }
-/* line 79, style.scss */
+/* line 99, style.scss */
 #header nav#primary-menu #menu-top-menu {
   float: right;
   border-bottom: 1px solid #8d9190;
   padding-top: 15px;
 }
-/* line 83, style.scss */
+/* line 103, style.scss */
 #header nav#primary-menu #menu-top-menu li {
   margin-bottom: 6px;
 }
 
 /* MAIN-CONTENT */
-/* line 100, style.scss */
+/* line 120, style.scss */
 #important-content {
   margin-top: 115px;
 }
 
 /* COMPONENTS - WORKS PREVIEW */
-/* line 105, style.scss */
+/* line 125, style.scss */
 ul#works-preview {
   padding: 0 0 0 10px;
 }
-/* line 107, style.scss */
+/* line 127, style.scss */
 ul#works-preview li {
   list-style: none;
   height: 200px;
@@ -115,7 +139,7 @@ ul#works-preview li {
   padding: 0 10px 0 0;
   margin-bottom: 10px;
 }
-/* line 115, style.scss */
+/* line 135, style.scss */
 ul#works-preview li h5 {
   font-family: 'Dancing Script', cursive;
   font-size: 25px;
@@ -129,32 +153,32 @@ ul#works-preview li h5 {
   display: none;
   color: #ededed;
 }
-/* line 128, style.scss */
+/* line 148, style.scss */
 ul#works-preview li h5 hr {
   margin: 10px 0 5px;
 }
-/* line 137, style.scss */
+/* line 157, style.scss */
 ul#works-preview li img {
   width: 100%;
   height: auto;
 }
 
 /* COMPONENTS - OWL CAROUSEL HOME */
-/* line 150, style.scss */
+/* line 170, style.scss */
 #owl-demo .item img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* line 157, style.scss */
+/* line 177, style.scss */
 .owl-buttons {
   position: absolute;
   width: 100%;
   margin-top: -200px;
 }
 
-/* line 162, style.scss */
+/* line 182, style.scss */
 .owl-prev, .owl-next {
   zoom: 3;
   color: white;
@@ -163,16 +187,20 @@ ul#works-preview li img {
   filter: alpha(opacity=80);
 }
 
-/* line 168, style.scss */
+/* line 188, style.scss */
 .owl-next {
   position: absolute;
   right: 13px;
 }
 
 /* FOOTER */
-/* line 178, style.scss */
+/* line 198, style.scss */
 #footer {
   margin: 30px auto;
   padding-top: 20px;
   border-top: 1px solid #8d9190;
+}
+/* line 203, style.scss */
+#footer .navbar-nav a {
+  padding: 0 10px 0 10px !important;
 }
