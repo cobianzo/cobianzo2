@@ -27,7 +27,7 @@
 					<button type="button" data-target="#navbarFilter" data-toggle="collapse" class="navbar-toggle">
 						<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 					</button>
-					<b class='pull-left padding-top font-title padding-left'> <?php _e('filter by format'); ?> </b>		
+					<b id='title-filter' class='pull-left font-title padding-left'> <?php _e('filter by format'); ?> </b>		
 				</div>			
 			
 				<div id="navbarFilter" class="collapse navbar-collapse">

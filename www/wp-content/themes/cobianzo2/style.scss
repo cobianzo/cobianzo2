@@ -19,6 +19,9 @@ $nav-padding-top:		15px;
 .padding-left {
 	padding-left:	$nav-padding-top * 2;
 }
+.padding-bottom {
+	padding-bottom:	$nav-padding-top * 2;
+}
 
 .two-col-ul {
 	li {
@@ -60,7 +63,9 @@ h1,h2,h3,h4,h5,h6 {
 h3{
 	color:		$gray-light;
 }
-
+hr {
+	border-color:	$brand-primary;
+}
 p { line-height: 1.6em; }
 
 /* Mozilla based browsers */
@@ -283,4 +288,30 @@ div.wpcf7-mail-sent-ok {
 		.active &, &.active {  border:0 ;}
 		
 	} .active a { border: 0;}
+}
+
+
+/* homepage */
+#title-filter {
+	padding-top: 	20px;
+}
+
+/* SINGLE PAGE */
+.category-work{
+	padding-top:	20px;
+	h5 {
+		text-align:		right;
+		float:			right;
+		padding-left:	0;		
+		padding-right:	0;				
+	}
+	.btn {
+		float:			right;
+		text-align:		right;
+	}
+}
+@media screen and (max-width: $screen-sm-min - 1) {
+	.category-work h5, .category-work .btn { 
+		float:left; text-align: left; padding-right:	10px;
+	} .category-work .btn { margin-top: -5px;}
 }

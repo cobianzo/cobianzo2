@@ -18,11 +18,11 @@ $gray-light:             #a9b2b1 !default; // # corporative color, light gray
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
 $brand-primary:         #cdb587 !default;		// amarillo
-$brand-secondary:		#f28036 !default;		// azul
+$brand-secondary:		#f28036 !default;		// naranja
 $brand-success: 		$brand-secondary !default;
 $brand-info:            darken($brand-primary, 30%) !default;
 $brand-warning:         darken($brand-success, 30%) !default;
-$brand-danger:          #d73703 !default;	// un rojo moderno
+$brand-danger:          #e46963 !default;	// un rojo moderno
 
 
 //== Scaffolding

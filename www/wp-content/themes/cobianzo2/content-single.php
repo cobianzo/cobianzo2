@@ -6,6 +6,9 @@
 
 <?php if (has_post_thumbnail()) : ?>
 <div class='col-xs-12 center-img-height featured-img-work'>
+	<span><a href='<?php echo get_bloginfo('home'); ?>/#portfolio'><i class='glyphicon glyphicon-circle-arrow-left'></i>
+		<?php _e("Back to works"); ?></a>
+	</span>
 <?php
 	if ($featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' )) : 
 
@@ -18,7 +21,8 @@
 <?php endif; ?>
 
 <header class='row-fluid clearfix'>
-	<span class='col-xs-8 col-sm-10'>
+
+	<span class='col-xs-12 col-sm-9'>
 		<h2>
 			<?php the_title(); ?>
 		</h2>
@@ -26,11 +30,11 @@
 			<?php echo $subtitle; ?>
 		</h3> <?php } ?>
 	</span>
-	<span class='col-xs-4 col-sm-2 padding-top'>
+	<span class='col-xs-12 col-sm-3 category-work'>
 		<?php
 		$work_cats	= 	wp_get_post_terms( get_the_ID(), 'work_category', array());
-		foreach ($work_cats as $cc) $w_c[]	=  $cc->name;
-		echo "<h5 class='pull-right'>".implode(', ', $w_c)."</h5>";
+		foreach ($work_cats as $cc) $w_c[]	=  $cc->name; 
+		echo "<h5 class='col-sm-12'>".implode(', ', $w_c)."</h5>";
 		?>	
 		<?php 
 		if ($website = get_post_meta (get_the_ID(), 'website', true)) 
@@ -65,7 +69,7 @@
 		
 	</aside>
 	
-	<div class='col-xs-8 col-sm-9'>
+	<div class='col-xs-8 col-sm-9 padding-bottom'>
 		<?php the_content(); ?>
 	</div>
 	

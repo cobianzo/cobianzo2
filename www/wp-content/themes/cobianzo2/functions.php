@@ -214,6 +214,18 @@ function print_work_gallery( $params=array()){
 
 
 
+
+// página single work
+add_filter('nav_menu_css_class' , 'add_custom_classes' , 10 , 2);
+function add_custom_classes($classes, $item){
+    if(is_single() && $item->title == __('Works')){
+         $classes[] = 'current-menu-item active';
+    }
+    return $classes;
+}
+
+
+
  // this function returns target='_blank' or target="_self" depending on the url,(if it contains the current server name. or not)
  function target_on_link($link="")
  {

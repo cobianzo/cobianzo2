@@ -4206,14 +4206,14 @@ select[multiple].input-lg,
 /* line 76, _buttons.scss */
 .btn-danger {
   color: white;
-  background-color: #d73703;
-  border-color: #be3103;
+  background-color: #e46963;
+  border-color: #e0544d;
 }
 /* line 15, mixins/_buttons.scss */
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
   color: white;
-  background-color: #a52a02;
-  border-color: #812102;
+  background-color: #dc3f38;
+  border-color: #cd2b23;
 }
 /* line 22, mixins/_buttons.scss */
 .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
@@ -4221,12 +4221,12 @@ select[multiple].input-lg,
 }
 /* line 32, mixins/_buttons.scss */
 .btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
-  background-color: #d73703;
-  border-color: #be3103;
+  background-color: #e46963;
+  border-color: #e0544d;
 }
 /* line 38, mixins/_buttons.scss */
 .btn-danger .badge {
-  color: #d73703;
+  color: #e46963;
   background-color: white;
 }
 
@@ -5931,11 +5931,11 @@ a.label:hover, a.label:focus {
 
 /* line 64, _labels.scss */
 .label-danger {
-  background-color: #d73703;
+  background-color: #e46963;
 }
 /* line 8, mixins/_labels.scss */
 .label-danger[href]:hover, .label-danger[href]:focus {
-  background-color: #a52a02;
+  background-color: #dc3f38;
 }
 
 /* line 7, _badges.scss */
@@ -6285,7 +6285,7 @@ a.thumbnail.active {
 
 /* line 103, _progress-bars.scss */
 .progress-bar-danger {
-  background-color: #d73703;
+  background-color: #e46963;
 }
 /* line 7, mixins/_progress-bar.scss */
 .progress-striped .progress-bar-danger {
