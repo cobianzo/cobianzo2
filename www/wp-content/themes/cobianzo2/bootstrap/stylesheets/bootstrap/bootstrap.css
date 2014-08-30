@@ -1406,7 +1406,7 @@ html {
 
 /* line 27, _scaffolding.scss */
 body {
-  font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42857;
   color: #1a1a1a;
@@ -1517,7 +1517,7 @@ hr {
 /* line 10, _type.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Century Gothic;
+  font-family: Century Gothic, "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;

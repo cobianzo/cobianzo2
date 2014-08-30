@@ -59,8 +59,9 @@
 		<?php
 		$work_tags	= wp_get_post_tags(get_the_ID());		
 		foreach ($work_tags as $work_tag) $w_t[] = $work_tag->name;
-		if (count($w_t)) echo " <p class='padding-top clearfix'><b>".__("Tags")."</b>: ".implode(', ', $w_t)."</p>";
+		if (count($w_t)) echo " <p class='padding-top clearfix'><b>".__("Tags")."</b>: <i>".implode(', ', $w_t)." </i></p>";
 		?>
+		<hr>
 		<?php		
 		if ($text_sidebar = get_post_meta (get_the_ID(), 'text_sidebar', true)) 
 			echo "<span class='clearfix'>$text_sidebar</span>";		

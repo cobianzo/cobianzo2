@@ -19,7 +19,7 @@
 	# using  gogole webfont
 ?>
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700|Dancing+Script' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=<?php if (is_home() || is_front_page()){ ?>Yellowtail|<?php } ?>Raleway:200,600' rel='stylesheet' type='text/css'>
 
 </head>
 

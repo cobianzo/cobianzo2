@@ -7,12 +7,12 @@
 
 /* line 9, style.scss */
 .font-title {
-  font-family: Century Gothic;
+  font-family: Century Gothic, "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* line 12, style.scss */
 .font-default {
-  font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* line 16, style.scss */
@@ -107,7 +107,7 @@ p {
 
 /* line 86, style.scss */
 .navbar-nav {
-  font-family: Century Gothic;
+  font-family: Century Gothic, "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 /* line 89, style.scss */
@@ -139,7 +139,7 @@ body.admin-bar .navbar-fixed-top {
 }
 /* line 122, style.scss */
 #header nav {
-  font-family: Century Gothic;
+  font-family: Century Gothic, "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 126, style.scss */
 #header nav#primary-menu {
@@ -223,7 +223,7 @@ ul#works-preview li h5 {
   padding: 10%;
   text-align: center;
   display: none;
-  color: #ededed;
+  color: #eeeeee;
 }
 /* line 200, style.scss */
 ul#works-preview li h5 hr {
