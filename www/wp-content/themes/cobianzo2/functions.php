@@ -39,7 +39,7 @@ function cobianzo_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	//add_theme_support( 'post-thumbnails' );
-
+	
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'cobianzo' ),
@@ -114,7 +114,7 @@ function cobianzo_scripts() {
 
 
 	# carousel
-	if ((is_home()) && (is_front_page()))
+	if ((is_home()) || (is_front_page()))
 	{	
 		wp_enqueue_style( 'owl-carousel-css', get_template_directory_uri() . '/js/owl-carousel/owl.carousel.css' );	
 		wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/owl-carousel/owl.carousel.min.js', array(), '20130115', true );
@@ -177,6 +177,7 @@ require get_template_directory() . '/inc/jetpack.php';
 add_action('wp_ajax_print_work_gallery', 'print_work_gallery'); /* for pagination with ajas. see netgig.custom.js*/
 add_action('wp_ajax_nopriv_print_work_gallery', 'print_work_gallery');
 function print_work_gallery( $params=array()){
+
 	$options = array_merge( array( 'work_category' => '' ) , (is_array($params)? $params :  array()));
 	if (isset($_POST['work_category']))  $options = array_merge($options, $_POST);
 
@@ -184,7 +185,7 @@ function print_work_gallery( $params=array()){
 		'post_type' 	=>	'work',
 		'posts_per_page'=>	-1,
 		'orderby'		=>	'menu_order date',
-		'order'			=> 'DESC'
+		'order'			=> 	'DESC'
 	);
 	
 	$params['work_category']	= 	$options['work_category'];
@@ -192,17 +193,31 @@ function print_work_gallery( $params=array()){
 	query_posts($params);
 	if (!have_posts()) {
 			get_template_part( 'content', 'none' ); 
-	}else 
+	}else { ?>
+	<ul id='works-preview'>
+	<?php	
 	while (have_posts()) : the_post();
 	?>
-	<ul id='works-preview'>
+
 	<?php
 				get_template_part( 'content', 'work-preview' );
+	endwhile;
 	?>
 	</ul>
 	<?php	
-	endwhile;
 
+	}
+	wp_reset_query();
 	if (defined('DOING_AJAX') && DOING_AJAX) { die(); }
 
 }
+
+
+
+ // this function returns target='_blank' or target="_self" depending on the url,(if it contains the current server name. or not)
+ function target_on_link($link="")
+ {
+ 	if (!$link) return;
+ 	$target =  " target='".(((strpos($link, $_SERVER["SERVER_NAME"]))||(!strpos(' '.$link,"http")))? '_self': '_blank' )."' ";
+ 	return $target;
+ }

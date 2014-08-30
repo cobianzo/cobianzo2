@@ -1,5 +1,6 @@
 jQuery(document).ready(function() {
  
+  if (jQuery("#owl-demo").length) {
   jQuery("#owl-demo").owlCarousel({
  
       navigation : true, // Show next and prev buttons
@@ -15,6 +16,7 @@ jQuery(document).ready(function() {
       // itemsMobile : false
  
   });
+  }
  
  
  
@@ -22,9 +24,29 @@ jQuery(document).ready(function() {
   	function(){	jthis = jQuery(this); jthis.find('h5').css('width', jthis.width()+'px').fadeTo('slow', 0.8); },
   	function(){ jQuery(this).find('h5').fadeOut('slow');  }  
   );
- 
+  
+  
+  
+  
+  /* efecto para centrar las imágenes */
+  center_img_height();
 });
 
+
+function center_img_height(){
+
+	jQuery(".center-img-height").each(function(index){
+		jthis = jQuery(this);
+		if (!jthis.find("img").length) return;
+		else jimg	= 	jthis.find("img");
+		var height	=	jthis.height();
+		var img_height	=	jimg.height();
+		if (img_height > height) {
+			diff	= img_height - height;
+			jimg.css("margin-top", diff/2*(-1));
+		}
+	});
+}
 
 function addLoadingWheel(contenedor, extra_css) { 	
 		if (typeof extra_css === "undefined") extra_css = '';

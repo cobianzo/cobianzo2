@@ -2,6 +2,7 @@
 
 function cobianzo_custom_post_types() {
 
+	/* TAXONOMY wor work category ------------------------------------------------------------*/
 	$labels = array(
 		'name'                       => _x( 'Work Categories', 'Work Categories', 'cobianzo' ),		'singular_name'              => _x( 'Work cat', 'Work cat', 'cobianzo' ),
 		'menu_name'                  => __( 'Work category', 'cobianzo' ),		'all_items'                  => __( 'All Items', 'cobianzo' ),
@@ -20,7 +21,10 @@ function cobianzo_custom_post_types() {
 		'show_tagcloud'              => true,
 	);
 	register_taxonomy( 'work_category', array( 'work' ), $args );
+	/* TAXONOMY wor work category ------------------------------------------------------------*/
 
+
+	/* WORKS  ------------------------------------------------------------*/
 	$labels = array(	'name'                => _x( 'Works', 'Works', 'cobianzo' ),'singular_name'       => _x( 'Work', 'Work', 'cobianzo' ),
 						'menu_name'           => __( 'Portfolio', 'cobianzo' ),'parent_item_colon'   => __( 'Parent Item:', 'cobianzo' ),
 						'all_items'           => __( 'All Items', 'cobianzo' ),'view_item'           => __( 'View Item', 'cobianzo' ),
@@ -44,7 +48,116 @@ function cobianzo_custom_post_types() {
 	);
 	register_post_type( 'work', $args );
 	add_theme_support( 'post-thumbnails', array( 'work' ) );
+	
+	
+	/* CAROUSEL  ------------------------------------------------------------*/
+/*	$labels = array(	'name'                => _x( 'Slider', 'Slider', 'cobianzo' ),'singular_name'       => _x( 'Slider', 'Slider', 'cobianzo' ),
+						'menu_name'           => __( 'Slider', 'cobianzo' ),'parent_item_colon'   => __( 'Parent Item:', 'cobianzo' ),
+						'all_items'           => __( 'All Items', 'cobianzo' ),'view_item'           => __( 'View Item', 'cobianzo' ),
+						'add_new_item'        => __( 'Add New Item', 'cobianzo' ),'add_new'             => __( 'Add New', 'cobianzo' ),
+						'edit_item'           => __( 'Edit Item', 'cobianzo' ),'update_item'         => __( 'Update Item', 'cobianzo' ),
+						'search_items'        => __( 'Search Item', 'cobianzo' ),'not_found'           => __( 'Not found', 'cobianzo' ),
+						'not_found_in_trash'  => __( 'Not found in Trash', 'cobianzo' ),	);
+	$args = array(
+		'label'               => __( 'slider', 'cobianzo' ),
+		'description'         => __( 'Slider. Just create one Slider item and attach images to it', 'cobianzo' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title'),
+		'taxonomies'          => array( ),
+		'hierarchical'        => true,
+		'public'              => false,		'show_ui'             => true,
+		'show_in_menu'        => true,		'show_in_nav_menus'   => false,
+		'show_in_admin_bar'   => false,		'menu_position'       => 5,
+		'can_export'          => true,		'has_archive'         => true,
+		'exclude_from_search' => false,		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+	);
+	register_post_type( 'slider', $args );	 */
+	
 }
 
 // Hook into the 'init' action
 add_action( 'init', 'cobianzo_custom_post_types', 0 );
+
+
+
+
+
+
+
+
+
+
+
+/* ACF */
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_featured-image-for-pages',
+		'title' => 'Featured Image for pages',
+		'fields' => array (
+			array (
+				'key' => 'field_5400b49d428b4',
+				'label' => 'Title on top',
+				'name' => 'title_on_top',
+				'type' => 'text',
+				'instructions' => 'Title with the heading h2 on top of the page',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5400b4c0428b5',
+				'label' => 'Subtitle on top',
+				'name' => 'subtitle_on_top',
+				'type' => 'text',
+				'instructions' => 'Below the title, as h3 heading',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5400ac9e07e38',
+				'label' => 'Featured Image',
+				'name' => 'featured_image',
+				'type' => 'image',
+				'instructions' => 'If you want to display an image on the top of the page, select it here.',
+				'save_format' => 'id',
+				'preview_size' => 'large',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'excerpt',
+				1 => 'custom_fields',
+				2 => 'discussion',
+				3 => 'comments',
+				4 => 'featured_image',
+				5 => 'categories',
+				6 => 'tags',
+				7 => 'send-trackbacks',
+			),
+		),
+		'menu_order' => 0,
+	));
+}

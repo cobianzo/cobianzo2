@@ -56,15 +56,15 @@
 					</ul>
 				</div>
 			</nav>
+			<?php # this is the script that load ajax to reload the works depending on the clicked filter (see functions.php, function print_work_gallery) --> ?>
 			<script>
 				jQuery('.filter-trigger-ajax').click(function(e){
 					e.preventDefault();
 					addLoadingWheel("body", '');
 					jthis	= jQuery(this);
 					jQuery.post(MyJS.ajaxurl, {
-			            		action: 'print_work_gallery',
-			            		work_category: jthis.attr('data-filter'),
-			            		ajax:	true,					
+			            		action: 		'print_work_gallery',
+			            		work_category: 	jthis.attr('data-filter'),
 			            }, function(response)     {	
 				            removeLoadingWheel();
 			            	jQuery('#works-preview-container').html(response);
@@ -80,7 +80,7 @@
 		
 		
 <!-- END FILTER MENU ***************************************************************************-->
-<section id='works-preview-container clearfix'> <!-- for ajax fill in -->
+<section id='works-preview-container' class='clearfix'> <!-- for ajax fill in -->
 <!-- LIST OF WORKS ***************************************************************************-->
 		
 		<?php

@@ -14,11 +14,12 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 $gray-darker:            #000000 !default; // negro
 $gray-dark:              lighten(#000, 10%) !default;   // 
 $gray:                   lighten(#000, 33.5%) !default; // #555
-$gray-light:             #8d9190 !default; // # corporative color, light gray
+$gray-light:             #a9b2b1 !default; // # corporative color, light gray
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
-$brand-primary:         #fbde00 !default;		// amarillo
-$brand-success:         #12adef !default;		// azul
+$brand-primary:         #cdb587 !default;		// amarillo
+$brand-secondary:		#f28036 !default;		// azul
+$brand-success: 		$brand-secondary !default;
 $brand-info:            darken($brand-primary, 30%) !default;
 $brand-warning:         darken($brand-success, 30%) !default;
 $brand-danger:          #d73703 !default;	// un rojo moderno

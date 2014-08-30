@@ -4,57 +4,88 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<?php if (has_post_thumbnail()) : ?>
+<div class='col-xs-12 center-img-height featured-img-work'>
+<?php
+	if ($featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' )) : 
 
-		<div class="entry-meta">
-			<?php cobianzo_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+		  if (is_array($featured_image)) { 
+		  echo "<img class='img-responsive' src='".$featured_image[0]."'>";
+		  }
+	endif;
+?>
+</div>
+<?php endif; ?>
 
-	<div class="entry-content">
+<header class='row-fluid clearfix'>
+	<span class='col-xs-8 col-sm-10'>
+		<h2>
+			<?php the_title(); ?>
+		</h2>
+		<?php if ($subtitle = get_post_meta(get_the_ID(), 'subtitle', true)) { ?> <h3 class='small padding-top'>
+			<?php echo $subtitle; ?>
+		</h3> <?php } ?>
+	</span>
+	<span class='col-xs-4 col-sm-2 padding-top'>
+		<?php
+		$work_cats	= 	wp_get_post_terms( get_the_ID(), 'work_category', array());
+		foreach ($work_cats as $cc) $w_c[]	=  $cc->name;
+		echo "<h5 class='pull-right'>".implode(', ', $w_c)."</h5>";
+		?>	
+		<?php 
+		if ($website = get_post_meta (get_the_ID(), 'website', true)) 
+			echo "<a class='btn btn-default clearfix' href='$website' ".target_on_link($website).
+					(($no_index = get_post_meta(get_the_ID(), 'no_index', true))? "rel='noindex nofollow'" : "" ).">"
+				.__("Go to the website")."</a>";
+		?>		
+	</span>
+	<hr class='clearfix col-xs-12'>
+</header>
+
+
+<div class="row-fluid clearfix">
+
+	<aside class='col-xs-4 col-sm-3'>
+		<?php		
+		if ($client = get_post_meta (get_the_ID(), 'client', true)) 
+			echo "<p class='clearfix padding-top'><b>".__("Client")."</b>: $client</p>";		
+		?>
+		
+	
+		<?php
+		$work_tags	= wp_get_post_tags(get_the_ID());		
+		foreach ($work_tags as $work_tag) $w_t[] = $work_tag->name;
+		if (count($w_t)) echo " <p class='padding-top clearfix'><b>".__("Tags")."</b>: ".implode(', ', $w_t)."</p>";
+		?>
+		<?php		
+		if ($text_sidebar = get_post_meta (get_the_ID(), 'text_sidebar', true)) 
+			echo "<span class='clearfix'>$text_sidebar</span>";		
+		?>
+		
+		
+	</aside>
+	
+	<div class='col-xs-8 col-sm-9'>
 		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'cobianzo' ),
-				'after'  => '</div>',
-			) );
+	</div>
+	
+</div>
+
+<section class='other-images clearfix row-fluid'>
+<?php
+
+	$attachments = wpba_get_attachments();
+	if ( is_array($attachments) )foreach ($attachments as $att) :
+		$image 			= wp_get_attachment_image_src( $att->ID, 'large' );		
 		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
+		<div class='col-xs-12 center-img-height height-427'>
+			<img class='img-responsive' src='<?php echo $image[0]; ?>' >
+		</div>
+		
 		<?php
-			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'cobianzo' ) );
+	endforeach;
 
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'cobianzo' ) );
+?>
+</section>
 
-			if ( ! cobianzo_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'cobianzo' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'cobianzo' );
-				}
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'cobianzo' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'cobianzo' );
-				}
-			} // end check for categories on this blog
 
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink()
-			);
-		?>
-
-		<?php edit_post_link( __( 'Edit', 'cobianzo' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->

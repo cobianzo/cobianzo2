@@ -27,7 +27,7 @@
 						'theme_location'    => 'footer',
 						'depth'             => 2,
 						'container'         => 'div',
-						'container_class'   => 'col-sm-6 text-center',
+						'container_class'   => 'col-sm-7 text-center',
 						'container_id'      => '',
 						'menu_class'        => 'navbar-nav nav',
 						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
@@ -35,7 +35,7 @@
 							);			
 			?>
 
-			<div class='col-sm-3 text-right'>
+			<div class='col-sm-2 text-right'>
 				<?php _e("All right reserved"); ?>
 			</div>	
 		</div>

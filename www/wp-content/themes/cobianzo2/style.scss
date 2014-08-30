@@ -20,6 +20,22 @@ $nav-padding-top:		15px;
 	padding-left:	$nav-padding-top * 2;
 }
 
+.two-col-ul {
+	li {
+		float:			left;	
+		width:			49%;
+		margin-right:	1%;
+	}
+}
+
+.center-img-height{
+	overflow:		 hidden;	
+	max-height:		 300px;  // this will overwritten by tsome other class, if needed.
+}
+.height-427{
+	max-height:		427px;
+}
+
 
 // ALV: animated gif for loading wheel 
 .loading-wheel {
@@ -29,14 +45,35 @@ $nav-padding-top:		15px;
   z-index: 999;
   text-align: center;
   background: white url("imgs/ajax-loader.gif") no-repeat center center;
-  @include opacity(0.8);    
+  @include opacity(8/10);    
 }
 
 
 /*
 Overwriting html 
 */
+h1,h2,h3,h4,h5,h6 {
+	color: 		$brand-secondary;
+	padding:	0;
+	margin:		5px 0;
+}
+h3{
+	color:		$gray-light;
+}
+
 p { line-height: 1.6em; }
+
+/* Mozilla based browsers */
+::-moz-selection {
+       background-color: 	$brand-primary;
+       color: 				$gray-darker;
+}
+
+/* Works in Safari */
+::selection {
+       background-color: 	$brand-primary;
+       color: 				$gray-darker;
+}
 
 
 /* OVERWRITING BOOTSTRAP CLASSES  */ 
@@ -112,7 +149,17 @@ body.admin-bar .navbar-fixed-top{
 	}
 
 }
+/* FOOTER */
 
+@media screen and (min-width: $screen-sm-min ) {
+	#footer ul#menu-footer-menu.navbar-nav li{ float: left;}
+}
+@media screen and (max-width: $screen-sm-min - 1) {
+	#footer ul#menu-footer-menu.navbar-nav li{ 
+		float: left; padding: 0px;
+		a {padding:2px !important;}
+	}
+}
 	
 		
 		
@@ -162,15 +209,22 @@ ul#works-preview	{
 }	
 		
 /* COMPONENTS - OWL CAROUSEL HOME */
+$carousel-max-height:		300px;
+
 #owl-demo {
 	.owl-wrapper-outer {
 		
 	}
 	
-	 .item img{
-    	display: 			block;
-	    width: 				100%;
-    	height: 			auto;
+	 .item {
+		.owl-img-container {
+			max-height:		 $carousel-max-height;
+		}
+	 	img{
+    		display: 			block;
+		    width: 				100%;
+    		height: 			auto;
+		}
 	}
 }
 
@@ -183,15 +237,38 @@ ul#works-preview	{
 	zoom:			3;
 	color:			white;
 	margin-left:	4px;
-	@include opacity(0.8);
+	@include opacity(8/10);
 }
 .owl-next {
 	position:		absolute;
 	right:			13px;
 }
 
+@media screen and (min-width: $screen-sm-min ) {
+	// para sobreponer el texto a la imagen
+	.panel-carousel {
+		@include opacity(9/10);
+		position:		absolute;
+		left:			5%;
+		padding-bottom:	10px;
+	}
+	#owl-demo, #owl-demo .item {
+
+	}
+}
+@media screen and (max-width: $screen-sm-min - 1) {
+	#owl-demo .item img {
+	
+	}
+}
 
 
+
+/* COMPONENTEs -*/
+div.wpcf7-mail-sent-ok {
+	border: 			1px solid $brand-primary !important;
+	background:			lighten($brand-secondary, 30%) !important;
+}
 
 /* FOOTER */
 
@@ -202,5 +279,8 @@ ul#works-preview	{
 
 	.navbar-nav a{ 
 		padding: 0 10px 0 10px !important;
-	}
+		color:	 $gray-light;
+		.active &, &.active {  border:0 ;}
+		
+	} .active a { border: 0;}
 }

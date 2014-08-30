@@ -25,7 +25,25 @@
   padding-left: 30px;
 }
 
-/* line 25, style.scss */
+/* line 24, style.scss */
+.two-col-ul li {
+  float: left;
+  width: 49%;
+  margin-right: 1%;
+}
+
+/* line 31, style.scss */
+.center-img-height {
+  overflow: hidden;
+  max-height: 300px;
+}
+
+/* line 35, style.scss */
+.height-427 {
+  max-height: 427px;
+}
+
+/* line 41, style.scss */
 .loading-wheel {
   position: absolute;
   width: 100%;
@@ -40,98 +58,142 @@
 /*
 Overwriting html 
 */
-/* line 39, style.scss */
+/* line 55, style.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #f28036;
+  padding: 0;
+  margin: 5px 0;
+}
+
+/* line 60, style.scss */
+h3 {
+  color: #a9b2b1;
+}
+
+/* line 64, style.scss */
 p {
   line-height: 1.6em;
 }
 
+/* Mozilla based browsers */
+/* line 67, style.scss */
+::-moz-selection {
+  background-color: #cdb587;
+  color: black;
+}
+
+/* Works in Safari */
+/* line 73, style.scss */
+::selection {
+  background-color: #cdb587;
+  color: black;
+}
+
 /* OVERWRITING BOOTSTRAP CLASSES  */
-/* line 43, style.scss */
+/* line 80, style.scss */
 .navbar-default {
   border: 0;
 }
 
-/* line 44, style.scss */
+/* line 81, style.scss */
 .navbar-nav {
   font-family: Century Gothic;
   font-size: 14px;
 }
-/* line 47, style.scss */
+/* line 84, style.scss */
 .navbar-nav li.active a, .navbar-nav li a.active {
-  border-bottom: 3px solid #fbde00;
+  border-bottom: 3px solid #cdb587;
 }
-/* line 50, style.scss */
+/* line 87, style.scss */
 .navbar-nav a {
   border-bottom: 3px solid white;
   padding: 20px 5px 0px 5px !important;
   margin: 0 10px;
 }
-/* line 55, style.scss */
+/* line 92, style.scss */
 .navbar-nav a:hover {
-  border-bottom: 3px solid #fbde00;
+  border-bottom: 3px solid #cdb587;
 }
 
-/* line 64, style.scss */
+/* line 101, style.scss */
 body.admin-bar .navbar-fixed-top {
   margin-top: 32px;
 }
 
 /* HEADER*/
-/* line 74, style.scss */
+/* line 111, style.scss */
 #header #the-logo {
   margin: 10px 0;
   position: absolute;
   z-index: 99;
 }
-/* line 80, style.scss */
+/* line 117, style.scss */
 #header nav {
   font-family: Century Gothic;
 }
-/* line 84, style.scss */
+/* line 121, style.scss */
 #header nav#primary-menu {
   padding-left: 0;
   border: 0;
   min-height: 100px;
   background: white;
 }
-/* line 90, style.scss */
+/* line 127, style.scss */
 #header nav#primary-menu h1 {
   padding: 0;
   margin: 0;
 }
-/* line 93, style.scss */
+/* line 130, style.scss */
 #header nav#primary-menu #border-bottom-container {
   position: absolute;
   width: 100%;
-  border-bottom: 1px solid #8d9190;
+  border-bottom: 1px solid #a9b2b1;
 }
-/* line 98, style.scss */
+/* line 135, style.scss */
 #header nav#primary-menu #navbarCollapse {
   border: 0;
 }
-/* line 99, style.scss */
+/* line 136, style.scss */
 #header nav#primary-menu #menu-top-menu {
   float: right;
-  border-bottom: 1px solid #8d9190;
+  border-bottom: 1px solid #a9b2b1;
   padding-top: 15px;
 }
-/* line 103, style.scss */
+/* line 140, style.scss */
 #header nav#primary-menu #menu-top-menu li {
   margin-bottom: 6px;
 }
 
+/* FOOTER */
+@media screen and (min-width: 768px) {
+  /* line 155, style.scss */
+  #footer ul#menu-footer-menu.navbar-nav li {
+    float: left;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 158, style.scss */
+  #footer ul#menu-footer-menu.navbar-nav li {
+    float: left;
+    padding: 0px;
+  }
+  /* line 160, style.scss */
+  #footer ul#menu-footer-menu.navbar-nav li a {
+    padding: 2px !important;
+  }
+}
 /* MAIN-CONTENT */
-/* line 120, style.scss */
+/* line 167, style.scss */
 #important-content {
   margin-top: 115px;
 }
 
 /* COMPONENTS - WORKS PREVIEW */
-/* line 125, style.scss */
+/* line 172, style.scss */
 ul#works-preview {
   padding: 0 0 0 10px;
 }
-/* line 127, style.scss */
+/* line 174, style.scss */
 ul#works-preview li {
   list-style: none;
   height: 200px;
@@ -139,7 +201,7 @@ ul#works-preview li {
   padding: 0 10px 0 0;
   margin-bottom: 10px;
 }
-/* line 135, style.scss */
+/* line 182, style.scss */
 ul#works-preview li h5 {
   font-family: 'Dancing Script', cursive;
   font-size: 25px;
@@ -153,32 +215,36 @@ ul#works-preview li h5 {
   display: none;
   color: #ededed;
 }
-/* line 148, style.scss */
+/* line 195, style.scss */
 ul#works-preview li h5 hr {
   margin: 10px 0 5px;
 }
-/* line 157, style.scss */
+/* line 204, style.scss */
 ul#works-preview li img {
   width: 100%;
   height: auto;
 }
 
 /* COMPONENTS - OWL CAROUSEL HOME */
-/* line 170, style.scss */
+/* line 220, style.scss */
+#owl-demo .item .owl-img-container {
+  max-height: 300px;
+}
+/* line 223, style.scss */
 #owl-demo .item img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* line 177, style.scss */
+/* line 231, style.scss */
 .owl-buttons {
   position: absolute;
   width: 100%;
   margin-top: -200px;
 }
 
-/* line 182, style.scss */
+/* line 236, style.scss */
 .owl-prev, .owl-next {
   zoom: 3;
   color: white;
@@ -187,20 +253,46 @@ ul#works-preview li img {
   filter: alpha(opacity=80);
 }
 
-/* line 188, style.scss */
+/* line 242, style.scss */
 .owl-next {
   position: absolute;
   right: 13px;
 }
 
+@media screen and (min-width: 768px) {
+  /* line 249, style.scss */
+  .panel-carousel {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    position: absolute;
+    left: 5%;
+    padding-bottom: 10px;
+  }
+}
+/* COMPONENTEs -*/
+/* line 268, style.scss */
+div.wpcf7-mail-sent-ok {
+  border: 1px solid #cdb587 !important;
+  background: #fbdbc6 !important;
+}
+
 /* FOOTER */
-/* line 198, style.scss */
+/* line 275, style.scss */
 #footer {
   margin: 30px auto;
   padding-top: 20px;
-  border-top: 1px solid #8d9190;
+  border-top: 1px solid #a9b2b1;
 }
-/* line 203, style.scss */
+/* line 280, style.scss */
 #footer .navbar-nav a {
   padding: 0 10px 0 10px !important;
+  color: #a9b2b1;
+}
+/* line 283, style.scss */
+.active #footer .navbar-nav a, #footer .navbar-nav a.active {
+  border: 0;
+}
+/* line 285, style.scss */
+#footer .active a {
+  border: 0;
 }
