@@ -133,84 +133,77 @@ body.admin-bar .navbar-fixed-top {
 /* HEADER*/
 /* line 116, style.scss */
 #header #the-logo {
+  margin: 10px 0;
   position: absolute;
-  top: 7px;
-  width: 170px;
-  height: 75px;
-  overflow: hidden;
   z-index: 99;
 }
-/* line 123, style.scss */
-#header #the-logo:hover img {
-  margin-top: -75px;
-}
-/* line 128, style.scss */
+/* line 122, style.scss */
 #header nav {
   font-family: Century Gothic, "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 132, style.scss */
+/* line 126, style.scss */
 #header nav#primary-menu {
   padding-left: 0;
   border: 0;
   min-height: 100px;
   background: white;
 }
-/* line 138, style.scss */
+/* line 132, style.scss */
 #header nav#primary-menu h1 {
   padding: 0;
   margin: 0;
 }
-/* line 141, style.scss */
+/* line 135, style.scss */
 #header nav#primary-menu #border-bottom-container {
   position: absolute;
   width: 100%;
   border-bottom: 1px solid #a9b2b1;
 }
-/* line 146, style.scss */
+/* line 140, style.scss */
 #header nav#primary-menu #navbarCollapse {
   border: 0;
 }
-/* line 147, style.scss */
+/* line 141, style.scss */
 #header nav#primary-menu #menu-top-menu {
   float: right;
   border-bottom: 1px solid #a9b2b1;
   padding-top: 15px;
 }
-/* line 151, style.scss */
+/* line 145, style.scss */
 #header nav#primary-menu #menu-top-menu li {
   margin-bottom: 6px;
 }
 
 /* FOOTER */
 @media screen and (min-width: 768px) {
-  /* line 166, style.scss */
+  /* line 160, style.scss */
   #footer ul#menu-footer-menu.navbar-nav li {
     float: left;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 169, style.scss */
+  /* line 163, style.scss */
   #footer ul#menu-footer-menu.navbar-nav li {
     float: left;
     padding: 0px;
   }
-  /* line 171, style.scss */
+  /* line 165, style.scss */
   #footer ul#menu-footer-menu.navbar-nav li a {
     padding: 2px !important;
   }
 }
 /* MAIN-CONTENT */
-/* line 178, style.scss */
+/* line 172, style.scss */
 #important-content {
   margin-top: 115px;
 }
 
 /* COMPONENTS - WORKS PREVIEW */
-/* line 183, style.scss */
+/* line 177, style.scss */
 ul#works-preview {
   padding: 0 0 0 10px;
 }
-/* line 185, style.scss */
+/* line 179, style.scss */
 ul#works-preview li {
   list-style: none;
   height: 200px;
@@ -218,7 +211,7 @@ ul#works-preview li {
   padding: 0 10px 0 0;
   margin-bottom: 10px;
 }
-/* line 193, style.scss */
+/* line 187, style.scss */
 ul#works-preview li h5 {
   font-family: 'Dancing Script', cursive;
   font-size: 25px;
@@ -230,38 +223,38 @@ ul#works-preview li h5 {
   padding: 10%;
   text-align: center;
   display: none;
-  color: #ededed;
+  color: #eeeeee;
 }
-/* line 206, style.scss */
+/* line 200, style.scss */
 ul#works-preview li h5 hr {
   margin: 10px 0 5px;
 }
-/* line 215, style.scss */
+/* line 209, style.scss */
 ul#works-preview li img {
   width: 100%;
   height: auto;
 }
 
 /* COMPONENTS - OWL CAROUSEL HOME */
-/* line 231, style.scss */
+/* line 225, style.scss */
 #owl-demo .item .owl-img-container {
-  max-height: 427px;
+  max-height: 300px;
 }
-/* line 234, style.scss */
+/* line 228, style.scss */
 #owl-demo .item img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* line 242, style.scss */
+/* line 236, style.scss */
 .owl-buttons {
   position: absolute;
   width: 100%;
   margin-top: -200px;
 }
 
-/* line 247, style.scss */
+/* line 241, style.scss */
 .owl-prev, .owl-next {
   zoom: 3;
   color: white;
@@ -270,14 +263,14 @@ ul#works-preview li img {
   filter: alpha(opacity=80);
 }
 
-/* line 253, style.scss */
+/* line 247, style.scss */
 .owl-next {
   position: absolute;
   right: 13px;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 260, style.scss */
+  /* line 254, style.scss */
   .panel-carousel {
     opacity: 0.9;
     filter: alpha(opacity=90);
@@ -287,66 +280,66 @@ ul#works-preview li img {
   }
 }
 /* COMPONENTEs -*/
-/* line 279, style.scss */
+/* line 273, style.scss */
 div.wpcf7-mail-sent-ok {
   border: 1px solid #cdb587 !important;
   background: #fbdbc6 !important;
 }
 
 /* FOOTER */
-/* line 286, style.scss */
+/* line 280, style.scss */
 #footer {
   margin: 30px auto;
   padding-top: 20px;
   border-top: 1px solid #a9b2b1;
 }
-/* line 291, style.scss */
+/* line 285, style.scss */
 #footer .navbar-nav a {
   padding: 0 10px 0 10px !important;
   color: #a9b2b1;
 }
-/* line 294, style.scss */
+/* line 288, style.scss */
 .active #footer .navbar-nav a, #footer .navbar-nav a.active {
   border: 0;
 }
-/* line 296, style.scss */
+/* line 290, style.scss */
 #footer .active a {
   border: 0;
 }
 
 /* homepage */
-/* line 301, style.scss */
+/* line 295, style.scss */
 #title-filter {
   padding-top: 20px;
 }
 
 /* SINGLE PAGE */
-/* line 306, style.scss */
+/* line 300, style.scss */
 .category-work {
   padding-top: 20px;
 }
-/* line 308, style.scss */
+/* line 302, style.scss */
 .category-work h5 {
   text-align: right;
   float: right;
   padding-left: 0;
   padding-right: 0;
 }
-/* line 314, style.scss */
+/* line 308, style.scss */
 .category-work .btn {
   float: right;
   text-align: right;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 320, style.scss */
+  /* line 314, style.scss */
   .category-work h5, .category-work .btn {
     float: left;
     text-align: left;
     padding-right: 10px;
   }
 
-  /* line 322, style.scss */
+  /* line 316, style.scss */
   .category-work .btn {
     margin-top: -5px;
   }
