@@ -114,9 +114,15 @@ body.admin-bar .navbar-fixed-top{
 #header {
 
 	#the-logo {
-		margin:				10px 0;
-		position:			absolute;
-		z-index:			99;
+		position: 		absolute;	
+		top: 			7px;		
+		width: 			170px;
+		height: 		75px;
+		overflow: 		hidden;
+		z-index:		99;
+		&:hover img {
+			margin-top: -75px;
+		}
 	}
 	
 	nav { 
@@ -214,7 +220,7 @@ ul#works-preview	{
 }	
 		
 /* COMPONENTS - OWL CAROUSEL HOME */
-$carousel-max-height:		300px;
+$carousel-max-height:		427px;
 
 #owl-demo {
 	.owl-wrapper-outer {
