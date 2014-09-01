@@ -54,12 +54,6 @@
 		if ($client = get_post_meta (get_the_ID(), 'client', true)) 
 			echo "<p class='clearfix padding-top'><b>".__("Client")."</b>: $client</p>";		
 		?>
-
-
-		<?php		
-		if (!($hide_date = get_post_meta (get_the_ID(), 'hide_date', true))) 
-			echo "<p class='clearfix padding-top'><b>".__("Year")."</b>: ".get_the_date('Y')."</p>";		
-		?>
 		
 	
 		<?php
@@ -67,10 +61,6 @@
 		foreach ($work_tags as $work_tag) $w_t[] = $work_tag->name;
 		if (count($w_t)) echo " <p class='padding-top clearfix'><b>".__("Tags")."</b>: ".implode(', ', $w_t)."</p>";
 		?>
-		
-			<hr>
-			
-			
 		<?php		
 		if ($text_sidebar = get_post_meta (get_the_ID(), 'text_sidebar', true)) 
 			echo "<span class='clearfix'>$text_sidebar</span>";		
@@ -78,7 +68,7 @@
 		
 		
 	</aside>
-
+	
 	<div class='col-xs-8 col-sm-9 padding-bottom'>
 		<?php the_content(); ?>
 	</div>
