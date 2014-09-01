@@ -226,6 +226,16 @@ if(function_exists("register_field_group"))
 				'message' => 'This will add the noindex nofollow to every link about this project.',
 				'default_value' => 0,
 			),
+			array (
+				'key' => 'field_5401e9c0d7ccc',
+				'label' => 'Hide Date',
+				'name' => 'hide_date',
+				'type' => 'true_false',
+				'instructions' => 'Don\'t show the date where the project was made',
+				'message' => '(The date of the project is taken from the date of the post. top right corner)',
+				'default_value' => 0,
+			),
+
 		),
 		'location' => array (
 			array (
