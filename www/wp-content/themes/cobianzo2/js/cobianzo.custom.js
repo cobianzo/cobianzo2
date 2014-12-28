@@ -1,6 +1,7 @@
 jQuery(document).ready(function() {
  
-  if (jQuery("#owl-demo").length) {
+  /* The slideshow, we use owl slider  */
+  if (jQuery("#owl-demo").length > 1) {
   jQuery("#owl-demo").owlCarousel({
  
       navigation : true, // Show next and prev buttons
@@ -18,8 +19,19 @@ jQuery(document).ready(function() {
   });
   }
  
+ /* efecto para q el menu se quede arriba */
+	var starting_position = jQuery('#primary-menu').outerHeight( true );
+	//alert(starting_position);
+	jQuery(window).scroll(function() {
+		var yPos = ( jQuery(window).scrollTop() );
+		if( yPos > starting_position && window.innerWidth > 270 ) { // show sticky menu after these many (starting_position) pixels have been scrolled down from the top and only when viewport width is greater than 500px.
+			jQuery("#header").addClass('navbar-fixed-top');
+		} else {
+			jQuery("#header").removeClass('navbar-fixed-top');
+		}
+	});
  
- 
+ /* the effect on previw work when hovering */
   jQuery("ul#works-preview li").hover(
   	function(){	jthis = jQuery(this); jthis.find('h5').css('width', jthis.width()+'px').fadeTo('slow', 0.8); },
   	function(){ jQuery(this).find('h5').fadeOut('slow');  }  
@@ -48,6 +60,11 @@ function center_img_height(){
 	});
 }
 
+
+
+/* Generic funciotons: */
+
+/* loading wheel when ajax. Si se especifica contenedor, se centra en el container, si no, en la window */
 function addLoadingWheel(contenedor, extra_css) { 	
 		if (typeof extra_css === "undefined") extra_css = '';
 		var contenedor 	=	(contenedor || 'body');		 	var jContenedor = 	jQuery(contenedor);

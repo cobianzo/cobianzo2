@@ -113,6 +113,43 @@ body.admin-bar .navbar-fixed-top{
 
 #header {
 
+	@include transition(all, 1s, ease-in-out); 		// this doesnt have any effect. fix it
+	
+	&.navbar-fixed-top {
+		
+		height:				40px;
+		background:			$gray-lighter;
+		width:				100%;
+		left:				0;
+		top:				0;
+		z-index:			9999;
+		
+		#primary-menu {
+			background:		transparent;
+			min-height:		0;
+			width:			100%;
+			margin:			0;
+			padding:		0;
+			
+			#the-logo{
+			
+				max-height:		30px;
+				margin-top:		5px;
+				margin-left:	5px;
+			
+			}
+			
+			ul#menu-top-menu {
+				
+				padding-top:		8px;
+			
+				> li > a {
+					padding-top:		0 !important;
+				}
+			}
+		}
+	}
+
 	#the-logo {
 		margin:				10px 0;
 		position:			absolute;

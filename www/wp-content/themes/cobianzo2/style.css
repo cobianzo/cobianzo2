@@ -1,45 +1,35 @@
 /* MY OWN CLASSES (generic) */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\000035}}
 .hide-faraway {
   position: absolute;
   left: -30000px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\000039}}
 .font-title {
   font-family: Quicksand; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000312}}
 .font-default {
   font-family: Arvo, "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000316}}
 .padding-top {
   padding-top: 14px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000319}}
 .padding-left {
   padding-left: 30px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000322}}
 .padding-bottom {
   padding-bottom: 30px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000327}}
 .two-col-ul li {
   float: left;
   width: 49%;
   margin-right: 1%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000334}}
 .center-img-height {
   overflow: hidden;
   max-height: 300px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000338}}
 .height-427 {
   max-height: 427px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000344}}
 .loading-wheel {
   position: absolute;
   width: 100%;
@@ -53,127 +43,127 @@
 /*
 Overwriting html 
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000358}}
 h1, h2, h3, h4, h5, h6 {
   color: #f28036;
   padding: 0;
   margin: 5px 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000363}}
 h3 {
   color: #a9b2b1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000366}}
 hr {
   border-color: #cdb587; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000369}}
 p {
   line-height: 1.6em; }
 
 /* Mozilla based browsers */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000372}}
 ::-moz-selection {
   background-color: #cdb587;
   color: #000000; }
 
 /* Works in Safari */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000378}}
 ::selection {
   background-color: #cdb587;
   color: #000000; }
 
 /* OVERWRITING BOOTSTRAP CLASSES  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000385}}
 .navbar-default {
   border: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000386}}
 .navbar-nav {
   font-family: Quicksand;
   font-size: 14px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000389}}
   .navbar-nav li.active a, .navbar-nav li a.active {
     border-bottom: 3px solid #cdb587; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000392}}
   .navbar-nav a {
     border-bottom: 3px solid white;
     padding: 20px 5px 0px 5px !important;
     margin: 0 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\0000397}}
     .navbar-nav a:hover {
       border-bottom: 3px solid #cdb587; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003106}}
 body.admin-bar .navbar-fixed-top {
   margin-top: 32px; }
 
 /* HEADER*/
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003116}}
-#header #the-logo {
-  margin: 10px 0;
-  position: absolute;
-  z-index: 99; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003122}}
-#header nav {
-  font-family: Quicksand; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003126}}
-#header nav#primary-menu {
-  padding-left: 0;
-  border: 0;
-  min-height: 100px;
-  background: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003132}}
-  #header nav#primary-menu h1 {
-    padding: 0;
-    margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003135}}
-  #header nav#primary-menu #border-bottom-container {
-    position: absolute;
+#header {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  #header.navbar-fixed-top {
+    height: 40px;
+    background: #eeeeee;
     width: 100%;
-    border-bottom: 1px solid #a9b2b1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003140}}
-  #header nav#primary-menu #navbarCollapse {
-    border: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003141}}
-  #header nav#primary-menu #menu-top-menu {
-    float: right;
-    border-bottom: 1px solid #a9b2b1;
-    padding-top: 15px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003145}}
-    #header nav#primary-menu #menu-top-menu li {
-      margin-bottom: 6px; }
+    left: 0;
+    top: 0;
+    z-index: 9999; }
+    #header.navbar-fixed-top #primary-menu {
+      background: transparent;
+      min-height: 0;
+      width: 100%;
+      margin: 0;
+      padding: 0; }
+      #header.navbar-fixed-top #primary-menu #the-logo {
+        max-height: 30px;
+        margin-top: 5px;
+        margin-left: 5px; }
+      #header.navbar-fixed-top #primary-menu ul#menu-top-menu {
+        padding-top: 8px; }
+        #header.navbar-fixed-top #primary-menu ul#menu-top-menu > li > a {
+          padding-top: 0 !important; }
+  #header #the-logo {
+    margin: 10px 0;
+    position: absolute;
+    z-index: 99; }
+  #header nav {
+    font-family: Quicksand; }
+  #header nav#primary-menu {
+    padding-left: 0;
+    border: 0;
+    min-height: 100px;
+    background: white; }
+    #header nav#primary-menu h1 {
+      padding: 0;
+      margin: 0; }
+    #header nav#primary-menu #border-bottom-container {
+      position: absolute;
+      width: 100%;
+      border-bottom: 1px solid #a9b2b1; }
+    #header nav#primary-menu #navbarCollapse {
+      border: 0; }
+    #header nav#primary-menu #menu-top-menu {
+      float: right;
+      border-bottom: 1px solid #a9b2b1;
+      padding-top: 15px; }
+      #header nav#primary-menu #menu-top-menu li {
+        margin-bottom: 6px; }
 
 /* FOOTER */
 @media screen and (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003160}}
   #footer ul#menu-footer-menu.navbar-nav li {
     float: left; } }
 @media screen and (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003163}}
   #footer ul#menu-footer-menu.navbar-nav li {
     float: left;
     padding: 0px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003165}}
     #footer ul#menu-footer-menu.navbar-nav li a {
       padding: 2px !important; } }
 /* MAIN-CONTENT */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003172}}
 #important-content {
   margin-top: 115px; }
 
 /* COMPONENTS - WORKS PREVIEW */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003177}}
 ul#works-preview {
   padding: 0 0 0 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003179}}
   ul#works-preview li {
     list-style: none;
     height: 200px;
     overflow: hidden;
     padding: 0 10px 0 0;
     margin-bottom: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003187}}
     ul#works-preview li h5 {
       font-family: 'Dancing Script', cursive;
       font-size: 25px;
@@ -186,31 +176,25 @@ ul#works-preview {
       text-align: center;
       display: none;
       color: #eeeeee; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003200}}
       ul#works-preview li h5 hr {
         margin: 10px 0 5px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003209}}
     ul#works-preview li img {
       width: 100%;
       height: auto; }
 
 /* COMPONENTS - OWL CAROUSEL HOME */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003225}}
 #owl-demo .item .owl-img-container {
   max-height: 300px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003228}}
 #owl-demo .item img {
   display: block;
   width: 100%;
   height: auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003236}}
 .owl-buttons {
   position: absolute;
   width: 100%;
   margin-top: -200px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003241}}
 .owl-prev, .owl-next {
   zoom: 3;
   color: white;
@@ -218,13 +202,11 @@ ul#works-preview {
   opacity: 0.8;
   filter: alpha(opacity=80); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003247}}
 .owl-next {
   position: absolute;
   right: 13px; }
 
 @media screen and (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003254}}
   .panel-carousel {
     opacity: 0.9;
     filter: alpha(opacity=90);
@@ -232,57 +214,44 @@ ul#works-preview {
     left: 5%;
     padding-bottom: 10px; } }
 /* COMPONENTEs -*/
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003273}}
 div.wpcf7-mail-sent-ok {
   border: 1px solid #cdb587 !important;
   background: #fbdbc6 !important; }
 
 /* FOOTER */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003280}}
 #footer {
   margin: 30px auto;
   padding-top: 20px;
   border-top: 1px solid #a9b2b1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003285}}
   #footer .navbar-nav a {
     padding: 0 10px 0 10px !important;
     color: #a9b2b1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003288}}
     .active #footer .navbar-nav a, #footer .navbar-nav a.active {
       border: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003290}}
   #footer .active a {
     border: 0; }
 
 /* homepage */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003295}}
 #title-filter {
   padding-top: 20px; }
 
 /* SINGLE PAGE */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003300}}
 .category-work {
   padding-top: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003302}}
   .category-work h5 {
     text-align: right;
     float: right;
     padding-left: 0;
     padding-right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003308}}
   .category-work .btn {
     float: right;
     text-align: right; }
 
 @media screen and (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003314}}
   .category-work h5, .category-work .btn {
     float: left;
     text-align: left;
     padding-right: 10px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/cobianzo2\/www\/wp-content\/themes\/cobianzo2\/style\.scss}line{font-family:\00003316}}
   .category-work .btn {
     margin-top: -5px; } }
-
-/*# sourceMappingURL=style.css.map */

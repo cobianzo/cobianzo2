@@ -130,6 +130,16 @@ function cobianzo_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cobianzo_scripts' );
 
+
+
+
+
+/* ALL THE REQUIREMENTS RELATED TO FUNCITONS *********************************************************** 
+*********************************************************** *********************************************************** 
+*********************************************************** *********************************************************** 
+*********************************************************** *********************************************************** 
+*********************************************************** *********************************************************** */
+
 /**
  * Implement the Custom Header feature. Not used :) !
  */
@@ -137,28 +147,21 @@ add_action( 'wp_enqueue_scripts', 'cobianzo_scripts' );
 
 
 
-
-require get_template_directory() . '/inc/wp_bootstrap_navwalker.php'; // to convert a menu into botstrap style. #https://github.com/twittem/wp-bootstrap-navwalker
-
-
+// to convert a menu into botstrap style. #https://github.com/twittem/wp-bootstrap-navwalker
+require get_template_directory() . '/inc/wp_bootstrap_navwalker.php'; 
 require get_template_directory() . '/inc/custom-post-types-acf.php';
-
-
 /**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
-
 /**
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
 /**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
 /**
  * Load Jetpack compatibility file.
  */
@@ -233,3 +236,23 @@ function add_custom_classes($classes, $item){
  	$target =  " target='".(((strpos($link, $_SERVER["SERVER_NAME"]))||(!strpos(' '.$link,"http")))? '_self': '_blank' )."' ";
  	return $target;
  }
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* helpers */
+ 
+ function print_filters_for( $hook = '' ) {
+    global $wp_filter;
+    if( empty( $hook ) || !isset( $wp_filter[$hook] ) )
+        return;
+
+    print '<pre>';
+    print_r( $wp_filter[$hook] );
+    print '</pre>';
+}

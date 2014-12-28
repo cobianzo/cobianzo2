@@ -15,7 +15,7 @@
 
 	<footer id="footer" class="clearfix container" role="contentinfo">
 		<div class='row-fluid'>
-			<div class='col-sm-3'>
+			<div class='col-sm-3 small'>
 				<?php
 					_e("Cobianzo Communication Ltd &copy;");
 				?>
@@ -35,7 +35,7 @@
 							);			
 			?>
 
-			<div class='col-sm-2 text-right'>
+			<div class='col-sm-2 text-right small'>
 				<?php _e("All right reserved"); ?>
 			</div>	
 		</div>
