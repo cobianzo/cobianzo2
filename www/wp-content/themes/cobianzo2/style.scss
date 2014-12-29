@@ -50,7 +50,41 @@ $nav-padding-top:		15px;
   background: white url("imgs/ajax-loader.gif") no-repeat center center;
   @include opacity(8/10);    
 }
+	$social-normal:		32;
+	$social-small:		22;		
 
+.social {
+	overflow:	hidden;
+	width:		($social-normal) + px;
+	height:		($social-normal) + px;	
+	padding:	0 !important;
+
+	
+	img 	{ 
+			margin:		0;
+			height:		($social-normal * 2) + px; 
+			@include transition(all, .7s, ease-in-out);
+	}
+	&:hover img {	margin-top: 	-($social-normal) + px; } 
+	
+	&.social-small {
+		width:		($social-small) + px;
+		height:		($social-small) + px;
+		
+		img {
+			height:		($social-small * 2) + px;	
+		}
+		&:hover img {  margin-top: 	(-$social-small - 3) + px;  }
+		
+		&.twitter img {
+			margin-left: 	-($social-small * 4) + px;
+		}
+	}
+}
+
+
+
+	
 
 /*
 Overwriting html 
@@ -86,18 +120,29 @@ p { line-height: 1.6em; }
 .navbar-nav {
 	font-family:		$headings-font-family;
 	font-size:			14px;
+	
 	li.active a, li a.active	{
 		border-bottom: 3px solid $brand-primary;		
 	}
-	a {	
+	
+	.menu-item a {	
 		border-bottom: 		3px solid white;			
 		padding:			20px 5px 0px 5px !important;
 		margin:				0 10px;
 				
 		&:hover{
 			border-bottom: 3px solid $brand-primary;	
-		}
+		}		
 	}
+	
+	li .social {	
+			margin-top: 	20px; 
+			margin-left:	20px;
+		}
+
+	
+	
+
 }
 
 
@@ -115,6 +160,8 @@ body.admin-bar .navbar-fixed-top{
 
 	@include transition(all, 1s, ease-in-out); 		// this doesnt have any effect. fix it
 	
+	
+	// this is when the user has scrolled down, the header attaches to the top! 
 	&.navbar-fixed-top {
 		
 		height:				40px;
@@ -123,6 +170,7 @@ body.admin-bar .navbar-fixed-top{
 		left:				0;
 		top:				0;
 		z-index:			9999;
+		@include opacity(0.9);
 		
 		#primary-menu {
 			background:		transparent;
@@ -145,7 +193,10 @@ body.admin-bar .navbar-fixed-top{
 			
 				> li > a {
 					padding-top:		0 !important;
+					
+					&.social 	{ margin-top: 0; margin-right:	20px; }
 				}
+				
 			}
 		}
 	}

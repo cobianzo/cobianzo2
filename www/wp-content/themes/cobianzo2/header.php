@@ -52,6 +52,15 @@
 			<!-- Collection of nav links and other content for toggling <div id='navbarCollapse' class='collapse navbar-collapse'> -->
 			<div id='border-bottom-container'>
 			 <?php
+						// first we see if we have to add facebook , twitter or skype links to the menu
+						$items_wrap		= '<ul id="%1$s" class="%2$s">%3$s</ul>';
+						$twitter_link	= "https://twitter.com/cobianzoco";
+						if ($twitter_link) {
+							$twitter_link	= '<li><a title="'.__('Follow us in twitter').'" href="'.$twitter_link.'" class="social social-small twitter"><img src="'.get_template_directory_uri().'/imgs/social-sprite.gif"></a></li>';
+							$items_wrap		= str_replace('%3$s</ul>', '%3$s '.$twitter_link.'</ul>', $items_wrap);
+						}
+
+						
 							wp_nav_menu( array(
 						'menu'              => 'primary',
 						'theme_location'    => 'primary',
@@ -61,9 +70,12 @@
 						'container_id'      => 'navbarCollapse',
 						'menu_class'        => 'nav navbar-nav',
 						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-						'walker'            => new wp_bootstrap_navwalker())
+						'walker'            => new wp_bootstrap_navwalker(),
+						'items_wrap'		=> $items_wrap, )
 							);
 			 ?>	
+			 
+				
 			 </div>
 			</nav>
 

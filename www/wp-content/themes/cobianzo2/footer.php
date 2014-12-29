@@ -45,7 +45,7 @@
 
 
 <?php
-print_filters_for("footer");
+//print_filters_for("wp_footer");
  wp_footer(); ?>
 
 </body>
