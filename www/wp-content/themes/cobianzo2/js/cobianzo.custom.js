@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
  
   /* The slideshow, we use owl slider  */
-  if (jQuery("#owl-demo").length > 1) {
+  if (jQuery("#owl-demo").length) {
   jQuery("#owl-demo").owlCarousel({
  
       navigation : true, // Show next and prev buttons
@@ -31,11 +31,12 @@ jQuery(document).ready(function() {
 		}
 	});
  
- /* the effect on previw work when hovering */
-  jQuery("ul#works-preview li").hover(
-  	function(){	jthis = jQuery(this); jthis.find('h5').css('width', jthis.width()+'px').fadeTo('slow', 0.8); },
-  	function(){ jQuery(this).find('h5').fadeOut('slow');  }  
-  );
+ /* the effect on previw work when hovering. Note that "live" is deprecated, but if i use "on", it doesnt work after using ajax */
+  jQuery("ul#works-preview li").live({
+    mouseenter: function () {        jthis = jQuery(this); jthis.find('h5').css('width', jthis.width()+'px').fadeTo('slow', 0.8);     },
+    mouseleave: function () {        jQuery(this).find('h5').fadeOut('slow');      }
+	});
+  
   
   
   

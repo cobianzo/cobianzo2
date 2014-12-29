@@ -119,7 +119,7 @@ function cobianzo_scripts() {
 		wp_enqueue_style( 'owl-carousel-css', get_template_directory_uri() . '/js/owl-carousel/owl.carousel.css' );	
 		wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/owl-carousel/owl.carousel.min.js', array(), '20130115', true );
 	}
-	wp_enqueue_script( 'cobianzo-custom', get_template_directory_uri() . '/js/cobianzo.custom.js', array(), '20130115', true );
+	wp_enqueue_script( 'cobianzo-custom', get_template_directory_uri() . '/js/cobianzo.custom.js', array(), '20140115', true );
 
 	wp_localize_script( 'cobianzo-custom', 'MyJS', array( 
 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ), 			  /* MyJS.ajaxurl , to use Ajax properly in WP , i need it */

@@ -36,7 +36,8 @@
 				?>
 					<ul class='navbar-nav nav pull-right'>
 					<li>
-						<a href='?filterby=#portfolio' title='' <?php echo (!$current_filter)? 'class=active': '' ; ?>>
+						<a 	href='?filterby=#portfolio' data-filter='' title='' 
+							class='filter-trigger-ajax <?php echo ($current_filter == '')? 'active': '' ; ?>'>
 							<?php _e('Show all'); ?>
 						</a>
 					</li>
@@ -45,7 +46,8 @@
 					foreach ($cats as $work_cat) {
 					?>
 					<li> 
-						<a 	href='?filterby=<?php echo $work_cat->slug; ?>#portfolio' title='<?php esc_attr(__('filter by ').$work_cat->name); ?>' data-filter='<?php echo $work_cat->slug; ?>'
+						<a 	href='?filterby=<?php echo $work_cat->slug; ?>#portfolio' title='<?php esc_attr(__('filter by ').$work_cat->name); ?>' 
+							data-filter='<?php echo $work_cat->slug; ?>'
 							class='<?php echo ($current_filter == $work_cat->slug)? 'active': '' ; ?> filter-trigger-ajax'>
 						<?php echo $work_cat->name;  ?> 
 						</a>

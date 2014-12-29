@@ -42,7 +42,11 @@
 	</footer><!-- #footer -->
 </div><!-- .container -->
 
-<?php wp_footer(); ?>
+
+
+<?php
+print_filters_for("footer");
+ wp_footer(); ?>
 
 </body>
 </html>
