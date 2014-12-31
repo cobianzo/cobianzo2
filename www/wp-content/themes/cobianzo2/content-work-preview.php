@@ -23,7 +23,7 @@ foreach ($work_cats as $cc) $w_c[]	=  $cc->name;
 			<?php 
 			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 				the_post_thumbnail('thumbnail');
-			} 
+			}else echo "<img src='".get_template_directory_uri()."/imgs/preview-work-generic.gif' alt='".__("work preview")."'>";
 			
 			?> 
 		

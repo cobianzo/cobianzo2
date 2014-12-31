@@ -4,11 +4,12 @@
  */
 ?>
 
+<span><a href='<?php echo get_bloginfo('home'); ?>/#portfolio'><i class='glyphicon glyphicon-circle-arrow-left'></i>
+		<?php _e("Back to works"); ?></a>
+</span>
+
 <?php if (has_post_thumbnail()) : ?>
 <div class='col-xs-12 center-img-height featured-img-work'>
-	<span><a href='<?php echo get_bloginfo('home'); ?>/#portfolio'><i class='glyphicon glyphicon-circle-arrow-left'></i>
-		<?php _e("Back to works"); ?></a>
-	</span>
 <?php
 	if ($featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' )) : 
 
@@ -92,7 +93,7 @@
 	if ( is_array($attachments) )foreach ($attachments as $att) :
 		$image 			= wp_get_attachment_image_src( $att->ID, 'large' );		
 		?>
-		<div class='col-xs-12 center-img-height height-427'>
+		<div class='col-xs-12 center-img-height height-427 other-img'>
 			<img class='img-responsive' src='<?php echo $image[0]; ?>' >
 		</div>
 		

@@ -54,6 +54,7 @@ function center_img_height(){
 		else jimg	= 	jthis.find("img");
 		var height	=	jthis.height();
 		var img_height	=	jimg.height();
+		
 		if (img_height > height) {
 			diff	= img_height - height;
 			jimg.css("margin-top", diff/2*(-1));

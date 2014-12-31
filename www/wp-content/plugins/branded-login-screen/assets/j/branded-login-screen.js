@@ -1,13 +1,13 @@
 jQuery(document).ready(function( $ ) {
 
 	$('#backtoblog a').prop('title','Back to Home Page');
-	$('#login').prepend('<h2><a href="'+$('#login h1:first a:first').attr("href")+'" class="button button-primary button-large">Vuelve a bioenergiaydt.com</a></h2><br class="clear">');
-	$('form#loginform').prepend('<h2>Introduce tus credenciales.</h2><br class="clear">');
-	$('form#lostpasswordform').prepend('<h2>Introduce la información requerida. Recibirás un email para reestablecer tu password.</h2><br class="clear">');
+	$('#login').prepend('<h2><a href="'+$('#login h1:first a:first').attr("href")+'" class="button button-primary button-large">Back to Cobianzo co.com</a></h2><br class="clear">');
+	$('form#loginform').prepend('<h2>Credentials?.</h2><br class="clear">');
+	$('form#lostpasswordform').prepend('<h2>Write down the info, the wait for your email.</h2><br class="clear">');
 	$('form#resetpassform').prepend('<h2>Introduce tu nuevo password.</h2><br class="clear">');
 
-	$('form#registerform').prepend('<h2>Crea tu cuenta. <br\>Comprueba tu email.</h2><br class="clear">');
-	$('form').prepend('<p class="ver"><a href="http://www.bioenergiaydt.com">Bioenergia y Desarrollo Tencnol&oacute;gico</a></p>');
+	$('form#registerform').prepend('<h2>Create your account. <br\>Check email.</h2><br class="clear">');
+	$('form').prepend('<p class="ver"><a href="'+$('#login h1:first a:first').attr("href")+'">Cobianzo Communication Ltd</a></p>');
 
 	//TODO: make the alert boxes look prettier. :)
 
