@@ -285,5 +285,13 @@ div.wpcf7-mail-sent-ok {
   .category-work .btn {
     margin-top: -5px; } }
 /* SINGLE WORK */
+#description img {
+  display: block;
+  width: 100% \9;
+  max-width: 100%;
+  height: auto; }
+
 .other-img {
   margin-bottom: 20px; }
+  .other-img img {
+    margin: auto; }

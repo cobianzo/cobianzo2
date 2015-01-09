@@ -6,7 +6,7 @@
  */
 
 /**
- * Set the content width based on the theme's design and stylesheet.
+ * Set the content width based on the theme's design and stylesheet.  NI SE USA
  */
 if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
@@ -201,9 +201,10 @@ function print_work_gallery( $params=array()){
 	<?php	
 	while (have_posts()) : the_post();
 	?>
-
+	
 	<?php
 				get_template_part( 'content', 'work-preview' );
+				
 	endwhile;
 	?>
 	</ul>
@@ -218,7 +219,7 @@ function print_work_gallery( $params=array()){
 
 
 
-// página single work
+// página single work, mantiene el menú Works seleccionado
 add_filter('nav_menu_css_class' , 'add_custom_classes' , 10 , 2);
 function add_custom_classes($classes, $item){
     if(is_single() && $item->title == __('Works')){
@@ -229,7 +230,12 @@ function add_custom_classes($classes, $item){
 
 
 
- // this function returns target='_blank' or target="_self" depending on the url,(if it contains the current server name. or not)
+
+ 
+ 
+ /* small helpers used in any place of the theme */
+ 
+  // this function returns target='_blank' or target="_self" depending on the url,(if it contains the current server name. or not)
  function target_on_link($link="")
  {
  	if (!$link) return;
@@ -238,14 +244,24 @@ function add_custom_classes($classes, $item){
  }
 
  
+ // a work can have a side image associated. This will display it 
+ function show_work_side_image($work_id = null){
+ 
+	global $post;
+	if (!$work_id) $work_id = $post->ID;
+	
+		
+	if ( ! $image_id = get_post_meta($work_id, "image_on_sidebar", true) )  return false;
+	
+		
+	$image_src = wp_get_attachment_image_src( $image_id, "thumbnail" );
+	
+	return "\n <br> \n <img src='".$image_src[0]."' alt='Image preview' class='img-responsive'>\n";
+ 
+ }
  
  
- 
- 
- 
- 
- 
- /* helpers */
+ /* debuggers  */
  
  function print_filters_for( $hook = '' ) {
     global $wp_filter;

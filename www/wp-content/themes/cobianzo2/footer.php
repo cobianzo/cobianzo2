@@ -15,10 +15,8 @@
 
 	<footer id="footer" class="clearfix container" role="contentinfo">
 		<div class='row-fluid'>
-			<div class='col-sm-3 small'>
-				<?php
-					_e("Cobianzo Communication Ltd &copy;");
-				?>
+			<div class='col-sm-3 small'  itemprop="name">
+				<?php bloginfo( 'blogname' ); ?> <?php _e("&copy;");?>
 			</div>
 
 			<?php

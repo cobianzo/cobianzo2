@@ -406,6 +406,14 @@ div.wpcf7-mail-sent-ok {
 
 
 /* SINGLE WORK */
+
+#description img {
+	@include img-responsive();
+}
+
 .other-img {
 	margin-bottom: 		20px;
+	
+	img { margin: auto;}
 }
+

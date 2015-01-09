@@ -171,6 +171,8 @@ if(function_exists("register_field_group"))
 	));
 	
 	
+	// PARA WORKS 
+	
 		register_field_group(array (
 		'id' => 'acf_work-fields',
 		'title' => 'Work fields',
@@ -271,4 +273,52 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+	
+
+	register_field_group(array (
+		'id' => 'acf_image-on-the-sidebar',
+		'title' => 'Image on the sidebar',
+		'fields' => array (
+			array (
+				'key' => 'field_54b05155da7cc',
+				'label' => 'image on sidebar',
+				'name' => 'image_on_sidebar',
+				'type' => 'image',
+				'instructions' => 'If you want to add an image on the sidebar, select it here.',
+				'save_format' => 'id',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_54b051a2da7cd',
+				'label' => 'Use this image on the sidebar also as the preview image',
+				'name' => 'use_image_sidebar_as_preview',
+				'type' => 'true_false',
+				'instructions' => 'On the homepage there is a preview image for every work. If you prefer to use this image instead of the featured image, check it',
+				'message' => 'Use this image on the sidebar also as the preview image',
+				'default_value' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'work',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 }
+
+
+

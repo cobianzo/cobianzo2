@@ -25,8 +25,8 @@
 <body <?php body_class(); ?>>
 
 
-<!-- Page Content -->
-<div class="container">
+<!-- Page Content. Adding Local business schema -->
+<div class="container"  itemscope itemtype="http://schema.org/LocalBusiness">
 	<div class=row>
 	
 		<header class='clearfix' id='header'>
@@ -44,8 +44,8 @@
 				<!-- LOGO -->
 				<h1 class='text-left col-sm-3 col-xs-8'>			
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title='<?php echo esc_attr(get_option( 'description' )); ?>'>
-						<b class='site-title hide-faraway'><?php bloginfo( 'blogname' ); ?></b>
-						<img id='the-logo' alt='<?php echo esc_attr(get_option( 'blogname' )).__('logo'); ?>' src='<?php echo get_template_directory_uri() ?>/imgs/logopantene.png' >
+						<b class='site-title hide-faraway'  itemprop="name"><?php bloginfo( 'blogname' ); ?></b>
+						<img  itemprop="image"  id='the-logo' alt='<?php echo esc_attr(get_option( 'blogname' )).__('logo'); ?>' src='<?php echo get_template_directory_uri() ?>/imgs/logopantene.png' >
 					</a>
 				</h1>		
 			</div>

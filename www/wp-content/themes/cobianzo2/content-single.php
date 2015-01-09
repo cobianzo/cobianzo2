@@ -63,7 +63,7 @@
 		?>
 		
 	
-		<?php
+		<?php  // TODO: surely we can do this with a simple wp function 
 		$work_tags	= wp_get_post_tags(get_the_ID());		
 		foreach ($work_tags as $work_tag) $w_t[] = $work_tag->name;
 		if (count($w_t)) echo " <p class='padding-top clearfix'><b>".__("Tags")."</b>: ".implode(', ', $w_t)."</p>";
@@ -78,9 +78,13 @@
 		?>
 		
 		
+		<?php 
+		echo show_work_side_image();		
+		?>
+		
 	</aside>
 
-	<div class='col-xs-8 col-sm-9 padding-bottom'>
+	<div id="description" class='col-xs-8 col-sm-9 padding-bottom'>
 		<?php the_content(); ?>
 	</div>
 	
@@ -93,7 +97,7 @@
 	if ( is_array($attachments) )foreach ($attachments as $att) :
 		$image 			= wp_get_attachment_image_src( $att->ID, 'large' );		
 		?>
-		<div class='col-xs-12 center-img-height height-427 other-img'>
+		<div class='col-xs-12 center-img-height height-427 other-img text-center'>
 			<img class='img-responsive' src='<?php echo $image[0]; ?>' >
 		</div>
 		
