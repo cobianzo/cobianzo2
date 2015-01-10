@@ -79,7 +79,7 @@
 		
 		
 		<?php 
-		echo show_work_side_image();		
+		echo "<br>".show_work_side_image();		
 		?>
 		
 	</aside>

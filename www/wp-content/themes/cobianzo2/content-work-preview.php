@@ -21,9 +21,11 @@ foreach ($work_cats as $cc) $w_c[]	=  $cc->name;
 			</h5>
 			
 			<?php 
-			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+			if  ((get_post_meta(get_the_ID(), 'use_image_sidebar_as_preview', true))  &&   ($img_html= show_work_side_image()) ) // if selected, we display the side image as the preview onw 
+				echo $img_html;
+			elseif ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 				the_post_thumbnail('thumbnail');
-			}else echo "<img src='".get_template_directory_uri()."/imgs/preview-work-generic.gif' alt='".__("work preview")."'>";
+			}else echo "<img src='".get_template_directory_uri()."/imgs/preview-work-generic.gif' alt='".__("work preview")."' class='img-responsive'>";
 			
 			?> 
 		

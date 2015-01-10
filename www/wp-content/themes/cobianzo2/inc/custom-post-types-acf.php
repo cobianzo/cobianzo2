@@ -171,6 +171,81 @@ if(function_exists("register_field_group"))
 	));
 	
 	
+	
+	
+	// page with several columns
+	if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_text-after-title',
+		'title' => 'Text after title',
+		'fields' => array (
+			array (
+				'key' => 'field_54b06577cca36',
+				'label' => 'advice',
+				'name' => '',
+				'type' => 'message',
+				'message' => 'This is a page template based in columns (2 or 3 columns template). The content for the page should be written in the editor below. To stop writing the content in one column and go on writing in the next column, use the "read more tag"  ( <i class="mce-ico mce-i-wp_more"></i> )button here in the toolbar.',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-2cols.php',
+					'order_no' => 1,
+					'group_no' => 0,
+				),
+			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-3cols.php',
+					'order_no' => 1,
+					'group_no' => 1,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	// PARA WORKS 
 	
 		register_field_group(array (
