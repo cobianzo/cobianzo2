@@ -12,7 +12,7 @@
 
 /* line 12, style.scss */
 .font-default {
-  font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* line 16, style.scss */
@@ -21,34 +21,39 @@
 }
 
 /* line 19, style.scss */
+.padding-top-50 {
+  padding-top: 50px;
+}
+
+/* line 22, style.scss */
 .padding-left {
   padding-left: 30px;
 }
 
-/* line 22, style.scss */
+/* line 25, style.scss */
 .padding-bottom {
   padding-bottom: 30px;
 }
 
-/* line 27, style.scss */
+/* line 30, style.scss */
 .two-col-ul li {
   float: left;
   width: 49%;
   margin-right: 1%;
 }
 
-/* line 34, style.scss */
+/* line 37, style.scss */
 .center-img-height {
   overflow: hidden;
   max-height: 300px;
 }
 
-/* line 38, style.scss */
+/* line 41, style.scss */
 .height-427 {
   max-height: 427px;
 }
 
-/* line 44, style.scss */
+/* line 47, style.scss */
 .loading-wheel {
   position: absolute;
   width: 100%;
@@ -63,147 +68,162 @@
 /*
 Overwriting html 
 */
-/* line 58, style.scss */
+/* line 61, style.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #f28036;
   padding: 0;
   margin: 5px 0;
 }
 
-/* line 63, style.scss */
+/* line 66, style.scss */
 h3 {
   color: #a9b2b1;
 }
 
-/* line 66, style.scss */
+/* line 69, style.scss */
 hr {
   border-color: #cdb587;
 }
 
-/* line 69, style.scss */
+/* line 72, style.scss */
 p {
   line-height: 1.6em;
 }
 
 /* Mozilla based browsers */
-/* line 72, style.scss */
+/* line 75, style.scss */
 ::-moz-selection {
   background-color: #cdb587;
   color: black;
 }
 
 /* Works in Safari */
-/* line 78, style.scss */
+/* line 81, style.scss */
 ::selection {
   background-color: #cdb587;
   color: black;
 }
 
 /* OVERWRITING BOOTSTRAP CLASSES  */
-/* line 85, style.scss */
+/* line 88, style.scss */
 .navbar-default {
   border: 0;
 }
 
-/* line 86, style.scss */
+/* line 89, style.scss */
 .navbar-nav {
   font-family: Century Gothic;
   font-size: 14px;
 }
-/* line 89, style.scss */
+/* line 92, style.scss */
 .navbar-nav li.active a, .navbar-nav li a.active {
   border-bottom: 3px solid #cdb587;
 }
-/* line 92, style.scss */
+/* line 95, style.scss */
 .navbar-nav a {
   border-bottom: 3px solid white;
   padding: 20px 5px 0px 5px !important;
   margin: 0 10px;
 }
-/* line 97, style.scss */
+/* line 100, style.scss */
 .navbar-nav a:hover {
   border-bottom: 3px solid #cdb587;
 }
 
-/* line 106, style.scss */
+@media screen and (max-width: 767px) {
+  /* line 107, style.scss */
+  #header nav#primary-menu #navbarCollapse {
+    background: #fff;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+  }
+}
+/* line 114, style.scss */
 body.admin-bar .navbar-fixed-top {
   margin-top: 32px;
 }
 
 /* HEADER*/
-/* line 116, style.scss */
-#header #the-logo {
-  margin: 10px 0;
+/* line 124, style.scss */
+#header #logo-container {
   position: absolute;
+  width: 200px;
+  height: 75px;
+  overflow: hidden;
+  margin: 10px 0;
   z-index: 99;
 }
-/* line 122, style.scss */
+/* line 132, style.scss */
+#header #logo-container:hover img {
+  margin-top: -75px;
+}
+/* line 139, style.scss */
 #header nav {
   font-family: Century Gothic;
 }
-/* line 126, style.scss */
+/* line 143, style.scss */
 #header nav#primary-menu {
   padding-left: 0;
   border: 0;
   min-height: 100px;
   background: white;
 }
-/* line 132, style.scss */
+/* line 149, style.scss */
 #header nav#primary-menu h1 {
   padding: 0;
   margin: 0;
 }
-/* line 135, style.scss */
+/* line 152, style.scss */
 #header nav#primary-menu #border-bottom-container {
   position: absolute;
   width: 100%;
   border-bottom: 1px solid #a9b2b1;
 }
-/* line 140, style.scss */
+/* line 157, style.scss */
 #header nav#primary-menu #navbarCollapse {
   border: 0;
 }
-/* line 141, style.scss */
+/* line 158, style.scss */
 #header nav#primary-menu #menu-top-menu {
   float: right;
   border-bottom: 1px solid #a9b2b1;
   padding-top: 15px;
 }
-/* line 145, style.scss */
+/* line 162, style.scss */
 #header nav#primary-menu #menu-top-menu li {
   margin-bottom: 6px;
 }
 
 /* FOOTER */
 @media screen and (min-width: 768px) {
-  /* line 160, style.scss */
+  /* line 177, style.scss */
   #footer ul#menu-footer-menu.navbar-nav li {
     float: left;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 163, style.scss */
+  /* line 180, style.scss */
   #footer ul#menu-footer-menu.navbar-nav li {
     float: left;
     padding: 0px;
   }
-  /* line 165, style.scss */
+  /* line 182, style.scss */
   #footer ul#menu-footer-menu.navbar-nav li a {
     padding: 2px !important;
   }
 }
 /* MAIN-CONTENT */
-/* line 172, style.scss */
+/* line 189, style.scss */
 #important-content {
   margin-top: 115px;
 }
 
 /* COMPONENTS - WORKS PREVIEW */
-/* line 177, style.scss */
+/* line 194, style.scss */
 ul#works-preview {
   padding: 0 0 0 10px;
 }
-/* line 179, style.scss */
+/* line 196, style.scss */
 ul#works-preview li {
   list-style: none;
   height: 200px;
@@ -211,7 +231,7 @@ ul#works-preview li {
   padding: 0 10px 0 0;
   margin-bottom: 10px;
 }
-/* line 187, style.scss */
+/* line 204, style.scss */
 ul#works-preview li h5 {
   font-family: 'Dancing Script', cursive;
   font-size: 25px;
@@ -223,38 +243,38 @@ ul#works-preview li h5 {
   padding: 10%;
   text-align: center;
   display: none;
-  color: #eeeeee;
+  color: #ededed;
 }
-/* line 200, style.scss */
+/* line 217, style.scss */
 ul#works-preview li h5 hr {
   margin: 10px 0 5px;
 }
-/* line 209, style.scss */
+/* line 226, style.scss */
 ul#works-preview li img {
   width: 100%;
   height: auto;
 }
 
 /* COMPONENTS - OWL CAROUSEL HOME */
-/* line 225, style.scss */
+/* line 242, style.scss */
 #owl-demo .item .owl-img-container {
   max-height: 300px;
 }
-/* line 228, style.scss */
+/* line 245, style.scss */
 #owl-demo .item img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* line 236, style.scss */
+/* line 253, style.scss */
 .owl-buttons {
   position: absolute;
   width: 100%;
   margin-top: -200px;
 }
 
-/* line 241, style.scss */
+/* line 258, style.scss */
 .owl-prev, .owl-next {
   zoom: 3;
   color: white;
@@ -263,14 +283,14 @@ ul#works-preview li img {
   filter: alpha(opacity=80);
 }
 
-/* line 247, style.scss */
+/* line 264, style.scss */
 .owl-next {
   position: absolute;
   right: 13px;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 254, style.scss */
+  /* line 271, style.scss */
   .panel-carousel {
     opacity: 0.9;
     filter: alpha(opacity=90);
@@ -279,67 +299,79 @@ ul#works-preview li img {
     padding-bottom: 10px;
   }
 }
+@media screen and (max-width: 767px) {
+  /* line 282, style.scss */
+  .owl-buttons {
+    margin-top: -80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 287, style.scss */
+  #title-filter {
+    margin-right: 10px;
+  }
+}
 /* COMPONENTEs -*/
-/* line 273, style.scss */
+/* line 293, style.scss */
 div.wpcf7-mail-sent-ok {
   border: 1px solid #cdb587 !important;
   background: #fbdbc6 !important;
 }
 
 /* FOOTER */
-/* line 280, style.scss */
+/* line 300, style.scss */
 #footer {
   margin: 30px auto;
   padding-top: 20px;
   border-top: 1px solid #a9b2b1;
 }
-/* line 285, style.scss */
+/* line 305, style.scss */
 #footer .navbar-nav a {
   padding: 0 10px 0 10px !important;
   color: #a9b2b1;
 }
-/* line 288, style.scss */
+/* line 308, style.scss */
 .active #footer .navbar-nav a, #footer .navbar-nav a.active {
   border: 0;
 }
-/* line 290, style.scss */
+/* line 310, style.scss */
 #footer .active a {
   border: 0;
 }
 
 /* homepage */
-/* line 295, style.scss */
+/* line 315, style.scss */
 #title-filter {
   padding-top: 20px;
 }
 
 /* SINGLE PAGE */
-/* line 300, style.scss */
+/* line 320, style.scss */
 .category-work {
   padding-top: 20px;
 }
-/* line 302, style.scss */
+/* line 322, style.scss */
 .category-work h5 {
   text-align: right;
   float: right;
   padding-left: 0;
   padding-right: 0;
 }
-/* line 308, style.scss */
+/* line 328, style.scss */
 .category-work .btn {
   float: right;
   text-align: right;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 314, style.scss */
+  /* line 334, style.scss */
   .category-work h5, .category-work .btn {
     float: left;
     text-align: left;
     padding-right: 10px;
   }
 
-  /* line 316, style.scss */
+  /* line 336, style.scss */
   .category-work .btn {
     margin-top: -5px;
   }

@@ -65,7 +65,7 @@
 		<?php
 		$work_tags	= wp_get_post_tags(get_the_ID());		
 		foreach ($work_tags as $work_tag) $w_t[] = $work_tag->name;
-		if (count($w_t)) echo " <p class='padding-top clearfix'><b>".__("Tags")."</b>: ".implode(', ', $w_t)."</p>";
+		if (count($w_t)) echo " <p class='padding-top clearfix'><b>".__("Tags")."</b>: <i>".implode(', ', $w_t)."</i></p>";
 		?>
 		
 			<hr>
@@ -89,11 +89,28 @@
 <?php
 
 	$attachments = wpba_get_attachments();
-	if ( is_array($attachments) )foreach ($attachments as $att) :
+	if ( is_array($attachments) )foreach ($attachments as $index => $att) :
 		$image 			= wp_get_attachment_image_src( $att->ID, 'large' );		
+		
+
 		?>
-		<div class='col-xs-12 center-img-height height-427'>
+
+		<div class='row-fuid'>
+		<?php echo "<hr class='col-xs-12'>"; ?>				
+		<div class='col-xs-12 col-sm-3'>
+			<?php $img_filename = substr(basename($att->guid), 0, strpos(basename($att->guid), '.') ) ;
+				  $title		= apply_filters("the_title", $att->post_title);
+				  if ($img_filename == $title) {
+				  	$title = __('screenshot').' '.($index + 1);
+				  }
+			?>
+			<h5 class=''><?php echo $title; ?></h5>
+			<?php echo apply_filters("the_content", $att->post_content); ?>			
+		</div>
+		<div class='col-xs-12 col-sm-9 center-img-height height-427'>
+
 			<img class='img-responsive' src='<?php echo $image[0]; ?>' >
+		</div>
 		</div>
 		
 		<?php

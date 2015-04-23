@@ -19,7 +19,8 @@
 	# using  gogole webfont
 ?>
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700|Dancing+Script' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script|Raleway:200,600' rel='stylesheet' type='text/css'>
+
 
 </head>
 
@@ -44,9 +45,9 @@
 		
 				<!-- LOGO -->
 				<h1 class='text-left col-sm-3 col-xs-8'>			
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title='<?php echo esc_attr(get_option( 'description' )); ?>'>
+					<a id='logo-container' href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title='<?php echo esc_attr(get_option( 'description' )); ?>'>
 						<b class='site-title hide-faraway'><?php bloginfo( 'blogname' ); ?></b>
-						<img id='the-logo' alt='<?php echo esc_attr(get_option( 'blogname' )).__('logo'); ?>' src='<?php echo get_template_directory_uri() ?>/imgs/logopantene.png' >
+						<img id='the-logo' alt='<?php echo esc_attr(get_option( 'blogname' )).__('logo'); ?>' src='<?php echo get_template_directory_uri() ?>/imgs/logo-sprite.png' >
 					</a>
 				</h1>		
 			</div>
