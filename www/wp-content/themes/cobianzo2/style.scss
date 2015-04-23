@@ -16,9 +16,6 @@ $nav-padding-top:		15px;
 .padding-top {
 	padding-top:	$nav-padding-top - 1;
 }
-.padding-top-50 {
-	padding-top:	50px;
-}
 .padding-left {
 	padding-left:	$nav-padding-top * 2;
 }
@@ -53,7 +50,41 @@ $nav-padding-top:		15px;
   background: white url("imgs/ajax-loader.gif") no-repeat center center;
   @include opacity(8/10);    
 }
+	$social-normal:		32;
+	$social-small:		22;		
 
+.social {
+	overflow:	hidden;
+	width:		($social-normal) + px;
+	height:		($social-normal) + px;	
+	padding:	0 !important;
+
+	
+	img 	{ 
+			margin:		0;
+			height:		($social-normal * 2) + px; 
+			@include transition(all, .7s, ease-in-out);
+	}
+	&:hover img {	margin-top: 	-($social-normal) + px; } 
+	
+	&.social-small {
+		width:		($social-small) + px;
+		height:		($social-small) + px;
+		
+		img {
+			height:		($social-small * 2) + px;	
+		}
+		&:hover img {  margin-top: 	(-$social-small - 3) + px;  }
+		
+		&.twitter img {
+			margin-left: 	-($social-small * 4) + px;
+		}
+	}
+}
+
+
+
+	
 
 /*
 Overwriting html 
@@ -89,26 +120,32 @@ p { line-height: 1.6em; }
 .navbar-nav {
 	font-family:		$headings-font-family;
 	font-size:			14px;
+	
 	li.active a, li a.active	{
 		border-bottom: 3px solid $brand-primary;		
 	}
-	a {	
+	
+	.menu-item a {	
 		border-bottom: 		3px solid white;			
 		padding:			20px 5px 0px 5px !important;
 		margin:				0 10px;
 				
 		&:hover{
 			border-bottom: 3px solid $brand-primary;	
-		}
+		}		
 	}
+	
+	li .social {	
+			margin-top: 	20px; 
+			margin-left:	20px;
+		}
+
+	
+	
+
 }
 
-@media screen and (max-width: $screen-sm-min - 1) {
-	#header nav#primary-menu #navbarCollapse {
-		background:		#fff;
-		@include opacity(8/10);
-	}
-}
+
 
 
 body.admin-bar .navbar-fixed-top{
@@ -121,19 +158,53 @@ body.admin-bar .navbar-fixed-top{
 
 #header {
 
-	#logo-container{
-		position:			absolute;	
-		width:				200px;
-		height:				75px;
-		overflow:			hidden;
-		margin:				10px 0;
-		z-index:			99;
-
-		&:hover img {
-					margin-top:	-75px;
+	@include transition(all, 1s, ease-in-out); 		// this doesnt have any effect. fix it
+	
+	
+	// this is when the user has scrolled down, the header attaches to the top! 
+	&.navbar-fixed-top {
+		
+		height:				40px;
+		background:			$gray-lighter;
+		width:				100%;
+		left:				0;
+		top:				0;
+		z-index:			9999;
+		@include opacity(0.9);
+		
+		#primary-menu {
+			background:		transparent;
+			min-height:		0;
+			width:			100%;
+			margin:			0;
+			padding:		0;
+			
+			#the-logo{
+			
+				max-height:		30px;
+				margin-top:		5px;
+				margin-left:	5px;
+			
+			}
+			
+			ul#menu-top-menu {
+				
+				padding-top:		8px;
+			
+				> li > a {
+					padding-top:		0 !important;
+					
+					&.social 	{ margin-top: 0; margin-right:	20px; }
+				}
+				
+			}
 		}
 	}
+
 	#the-logo {
+		margin:				10px 0;
+		position:			absolute;
+		z-index:			99;
 	}
 	
 	nav { 
@@ -279,15 +350,12 @@ $carousel-max-height:		300px;
 	}
 }
 @media screen and (max-width: $screen-sm-min - 1) {
-	.owl-buttons {
-		margin-top:	-80px;
+	#owl-demo .item img {
+	
 	}
 }
-@media screen and (max-width: $screen-sm-min - 1) {
-	#title-filter {
-		margin-right:	10px;
-	}
-}
+
+
 
 /* COMPONENTEs -*/
 div.wpcf7-mail-sent-ok {
@@ -335,3 +403,17 @@ div.wpcf7-mail-sent-ok {
 		float:left; text-align: left; padding-right:	10px;
 	} .category-work .btn { margin-top: -5px;}
 }
+
+
+/* SINGLE WORK */
+
+#description img {
+	@include img-responsive();
+}
+
+.other-img {
+	margin-bottom: 		20px;
+	
+	img { margin: auto;}
+}
+

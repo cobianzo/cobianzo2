@@ -4,6 +4,8 @@
  * See: http://jetpack.me/
  *
  * @package cobianzo
+ 
+ El tema no usa Jetpack, y la verdad no sé qué es infinite scroll
  */
 
 /**

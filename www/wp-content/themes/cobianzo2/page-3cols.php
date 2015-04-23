@@ -40,7 +40,7 @@ get_header(); ?>
 		echo $columns_content[1];
 	} ?>	
 	</div>
-	<div class='col-md-3 col-sm-12'>
+	<div class='col-md-3 col-sm-12 text-justify'>
 	<?php if (count($columns_content) >= 2) { 
 		echo $columns_content[2];
 	} ?>	

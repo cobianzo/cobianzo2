@@ -4,11 +4,12 @@
  */
 ?>
 
+<span><a href='<?php echo get_bloginfo('home'); ?>/#portfolio'><i class='glyphicon glyphicon-circle-arrow-left'></i>
+		<?php _e("Back to works"); ?></a>
+</span>
+
 <?php if (has_post_thumbnail()) : ?>
 <div class='col-xs-12 center-img-height featured-img-work'>
-	<span><a href='<?php echo get_bloginfo('home'); ?>/#portfolio'><i class='glyphicon glyphicon-circle-arrow-left'></i>
-		<?php _e("Back to works"); ?></a>
-	</span>
 <?php
 	if ($featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' )) : 
 
@@ -62,10 +63,10 @@
 		?>
 		
 	
-		<?php
+		<?php  // TODO: surely we can do this with a simple wp function 
 		$work_tags	= wp_get_post_tags(get_the_ID());		
 		foreach ($work_tags as $work_tag) $w_t[] = $work_tag->name;
-		if (count($w_t)) echo " <p class='padding-top clearfix'><b>".__("Tags")."</b>: <i>".implode(', ', $w_t)."</i></p>";
+		if (count($w_t)) echo " <p class='padding-top clearfix'><b>".__("Tags")."</b>: ".implode(', ', $w_t)."</p>";
 		?>
 		
 			<hr>
@@ -77,9 +78,13 @@
 		?>
 		
 		
+		<?php 
+		echo "<br>".show_work_side_image();		
+		?>
+		
 	</aside>
 
-	<div class='col-xs-8 col-sm-9 padding-bottom'>
+	<div id="description" class='col-xs-8 col-sm-9 padding-bottom'>
 		<?php the_content(); ?>
 	</div>
 	
@@ -89,28 +94,11 @@
 <?php
 
 	$attachments = wpba_get_attachments();
-	if ( is_array($attachments) )foreach ($attachments as $index => $att) :
+	if ( is_array($attachments) )foreach ($attachments as $att) :
 		$image 			= wp_get_attachment_image_src( $att->ID, 'large' );		
-		
-
 		?>
-
-		<div class='row-fuid'>
-		<?php echo "<hr class='col-xs-12'>"; ?>				
-		<div class='col-xs-12 col-sm-3'>
-			<?php $img_filename = substr(basename($att->guid), 0, strpos(basename($att->guid), '.') ) ;
-				  $title		= apply_filters("the_title", $att->post_title);
-				  if ($img_filename == $title) {
-				  	$title = __('screenshot').' '.($index + 1);
-				  }
-			?>
-			<h5 class=''><?php echo $title; ?></h5>
-			<?php echo apply_filters("the_content", $att->post_content); ?>			
-		</div>
-		<div class='col-xs-12 col-sm-9 center-img-height height-427'>
-
+		<div class='col-xs-12 center-img-height height-427 other-img text-center'>
 			<img class='img-responsive' src='<?php echo $image[0]; ?>' >
-		</div>
 		</div>
 		
 		<?php

@@ -15,10 +15,8 @@
 
 	<footer id="footer" class="clearfix container" role="contentinfo">
 		<div class='row-fluid'>
-			<div class='col-sm-3'>
-				<?php
-					_e("Cobianzo Communication Ltd &copy;");
-				?>
+			<div class='col-sm-3 small'  itemprop="name">
+				<?php bloginfo( 'blogname' ); ?> <?php _e("&copy;");?>
 			</div>
 
 			<?php
@@ -35,14 +33,18 @@
 							);			
 			?>
 
-			<div class='col-sm-2 text-right'>
+			<div class='col-sm-2 text-right small'>
 				<?php _e("All right reserved"); ?>
 			</div>	
 		</div>
 	</footer><!-- #footer -->
 </div><!-- .container -->
 
-<?php wp_footer(); ?>
+
+
+<?php
+//print_filters_for("wp_footer");
+ wp_footer(); ?>
 
 </body>
 </html>

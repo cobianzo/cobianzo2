@@ -1,5 +1,11 @@
 <?php
 
+
+/* --------------------------------------------------------------------------------------
+PARA WORKS 
+--------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------- */
+
 function cobianzo_custom_post_types() {
 
 	/* TAXONOMY wor work category ------------------------------------------------------------*/
@@ -87,7 +93,10 @@ add_action( 'init', 'cobianzo_custom_post_types', 0 );
 
 
 
-
+/* --------------------------------------------------------------------------------------
+PARA PAGES 
+--------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------- */
 
 /* ACF */
 if(function_exists("register_field_group"))
@@ -161,6 +170,83 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 	
+	
+	
+	
+	// page with several columns
+	if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_text-after-title',
+		'title' => 'Text after title',
+		'fields' => array (
+			array (
+				'key' => 'field_54b06577cca36',
+				'label' => 'advice',
+				'name' => '',
+				'type' => 'message',
+				'message' => 'This is a page template based in columns (2 or 3 columns template). The content for the page should be written in the editor below. To stop writing the content in one column and go on writing in the next column, use the "read more tag"  ( <i class="mce-ico mce-i-wp_more"></i> )button here in the toolbar.',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-2cols.php',
+					'order_no' => 1,
+					'group_no' => 0,
+				),
+			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-3cols.php',
+					'order_no' => 1,
+					'group_no' => 1,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	// PARA WORKS 
 	
 		register_field_group(array (
 		'id' => 'acf_work-fields',
@@ -262,4 +348,52 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+	
+
+	register_field_group(array (
+		'id' => 'acf_image-on-the-sidebar',
+		'title' => 'Image on the sidebar',
+		'fields' => array (
+			array (
+				'key' => 'field_54b05155da7cc',
+				'label' => 'image on sidebar',
+				'name' => 'image_on_sidebar',
+				'type' => 'image',
+				'instructions' => 'If you want to add an image on the sidebar, select it here.',
+				'save_format' => 'id',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_54b051a2da7cd',
+				'label' => 'Use this image on the sidebar also as the preview image',
+				'name' => 'use_image_sidebar_as_preview',
+				'type' => 'true_false',
+				'instructions' => 'On the homepage there is a preview image for every work. If you prefer to use this image instead of the featured image, check it',
+				'message' => 'Use this image on the sidebar also as the preview image',
+				'default_value' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'work',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 }
+
+
+
